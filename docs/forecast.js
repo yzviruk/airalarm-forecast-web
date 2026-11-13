@@ -8,9 +8,10 @@ const NEW_ALERT_MIN = 15;
 const RECENT_END_SCALE_MIN = 60;
 const OBLASTS_NORMALISER = 24;
 const MIN_COMPARABLE = 8;
-// Only this level counts as an alert; others (e.g. "yellow") are shown but not fed to the model.
-// ASSUMPTION: the data source does not document its levels.
-export const ALERT_LEVEL = "red";
+// Every entry of the alerts feed is a real alert, whatever its level. The source sends "red"
+// and "yellow"; both are official air raid alerts (the official announcements say "yellow level
+// of alert, go to the shelter"). The level is only shown. An entry without a level is shown as this one.
+export const DEFAULT_LEVEL = "red";
 
 /** ISO time -> milliseconds since epoch, or null. Tolerates nanoseconds. */
 export function parseTime(value) {
@@ -65,19 +66,18 @@ export function prepareGeometry(model) {
 /** {level, since} of the alert covering the target raion; level is null when there is none. */
 export function targetAlert(snap, g) {
   const own = snap.raions.get(g.target) ?? snap.oblasts.get(g.targetOblast);
-  return own ? { level: own.level || ALERT_LEVEL, since: own.since } : { level: null, since: null };
+  return own ? { level: own.level || DEFAULT_LEVEL, since: own.since } : { level: null, since: null };
 }
 
-/** Raions under a real alert: Map raion -> ms when its alert started. */
+/** Raions under alert (any level): Map raion -> ms when its alert started. */
 export function activeRaions(snap, g, receivedMs) {
   const active = new Map();
   for (const [key, a] of snap.raions) {
-    if (g.weight.has(key) && (a.level || ALERT_LEVEL) === ALERT_LEVEL) {
+    if (g.weight.has(key)) {
       active.set(key, a.since ?? receivedMs);
     }
   }
   for (const [okey, a] of snap.oblasts) {
-    if ((a.level || ALERT_LEVEL) !== ALERT_LEVEL) continue;
     for (const [raion, oblast] of g.oblastOf) {
       if (oblast === okey && g.weight.has(raion) && !active.has(raion)) {
         active.set(raion, a.since ?? receivedMs);
@@ -186,10 +186,10 @@ export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedM
 
   const own = targetAlert(snap, g);
   const active = activeRaions(snap, g, nowMs);
-  const inAlert = own.level === ALERT_LEVEL;
+  const inAlert = own.level !== null;
   let sameActive = inAlert ? 1 : 0;
   for (const r of g.sameOblast) if (active.has(r)) sameActive += 1;
-  result.alert = { ...result.alert, status: inAlert ? "alert" : (own.level ? "elevated" : "none"),
+  result.alert = { ...result.alert, status: inAlert ? "alert" : "none",
                    level: own.level, since: own.since, oblastRaionsActive: sameActive };
 
   if (inAlert) {

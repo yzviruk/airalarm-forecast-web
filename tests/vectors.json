@@ -692,7 +692,7 @@
    }
   },
   {
-   "name": "yellow neighbours are ignored",
+   "name": "yellow neighbours count like red ones",
    "now": "2026-11-13T12:00:00Z",
    "lastEndedAt": null,
    "alerts": {
@@ -797,54 +797,54 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 5,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0032,
+      "probability": 0.4,
       "baseRate": 0.0196,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
-      "probability": 0.0062,
+      "probability": 0.4,
       "baseRate": 0.0382,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.0138,
+      "probability": 0.4,
       "baseRate": 0.0736,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.0208,
+      "probability": 0.4,
       "baseRate": 0.1057,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
   },
   {
-   "name": "target is yellow",
+   "name": "alert at the target, yellow level",
    "now": "2026-11-13T12:00:00Z",
    "lastEndedAt": null,
    "alerts": {
@@ -868,52 +868,28 @@
     "oblasts": []
    },
    "expected": {
-    "mode": "quiet",
-    "status": "elevated",
+    "mode": "alert",
+    "status": "alert",
     "level": "yellow",
     "since": "2026-11-13T11:50:00Z",
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 1,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0059,
-      "baseRate": 0.0196,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.39759036144578314
      },
      {
       "minutes": 60,
-      "probability": 0.0081,
-      "baseRate": 0.0382,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.26907630522088355
      },
      {
       "minutes": 120,
-      "probability": 0.0161,
-      "baseRate": 0.0736,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.13654618473895583
      },
      {
       "minutes": 180,
-      "probability": 0.0231,
-      "baseRate": 0.1057,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.09236947791164658
      }
     ]
    }
@@ -2568,7 +2544,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0091,
+      "probability": 0.0112,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -2578,7 +2554,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0196,
+      "probability": 0.0242,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -2588,7 +2564,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.0461,
+      "probability": 0.0559,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -2598,7 +2574,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0677,
+      "probability": 0.0821,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -2940,7 +2916,7 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 2,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -3020,7 +2996,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0032,
+      "probability": 0.0048,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -3030,7 +3006,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0062,
+      "probability": 0.0094,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -3040,7 +3016,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.0138,
+      "probability": 0.0201,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -3050,7 +3026,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0208,
+      "probability": 0.0306,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -3388,52 +3364,28 @@
     ]
    },
    "expected": {
-    "mode": "quiet",
-    "status": "elevated",
+    "mode": "alert",
+    "status": "alert",
     "level": "yellow",
     "since": "2026-10-27T10:21:04Z",
-    "oblastRaionsActive": 4,
+    "oblastRaionsActive": 5,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.4,
-      "baseRate": 0.0196,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.42578125
      },
      {
       "minutes": 60,
-      "probability": 0.4,
-      "baseRate": 0.0382,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.265625
      },
      {
       "minutes": 120,
-      "probability": 0.4,
-      "baseRate": 0.0736,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.1328125
      },
      {
       "minutes": 180,
-      "probability": 0.4,
-      "baseRate": 0.1057,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.08984375
      }
     ]
    }
@@ -3564,7 +3516,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.155,
+      "probability": 0.2573,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -3574,7 +3526,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.155,
+      "probability": 0.2573,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
@@ -3584,7 +3536,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.1803,
+      "probability": 0.2944,
       "baseRate": 0.0736,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -3594,10 +3546,10 @@
      },
      {
       "minutes": 180,
-      "probability": 0.2209,
+      "probability": 0.3536,
       "baseRate": 0.1057,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
@@ -3759,7 +3711,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0524,
+      "probability": 0.0538,
       "baseRate": 0.0196,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -3769,7 +3721,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.1091,
+      "probability": 0.1167,
       "baseRate": 0.0382,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -3779,7 +3731,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.1629,
+      "probability": 0.1798,
       "baseRate": 0.0736,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -3789,7 +3741,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.2396,
+      "probability": 0.2605,
       "baseRate": 0.1057,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -4002,7 +3954,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.2654,
+      "probability": 0.3202,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -4503,12 +4455,12 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 1,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.1319,
+      "probability": 0.3546,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -4518,33 +4470,33 @@
      },
      {
       "minutes": 60,
-      "probability": 0.2055,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.3013,
+      "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.396,
+      "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -4951,7 +4903,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0376,
+      "probability": 0.056,
       "baseRate": 0.0196,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -4961,7 +4913,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0728,
+      "probability": 0.1072,
       "baseRate": 0.0382,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -4971,7 +4923,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.1414,
+      "probability": 0.1977,
       "baseRate": 0.0736,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -4981,7 +4933,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.1811,
+      "probability": 0.251,
       "baseRate": 0.1057,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -5337,7 +5289,7 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 4,
+    "oblastRaionsActive": 5,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -5566,48 +5518,48 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 2,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.223,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
-      "probability": 0.2816,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.3121,
+      "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.3909,
+      "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -5675,7 +5627,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0093,
+      "probability": 0.0115,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -5685,7 +5637,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0197,
+      "probability": 0.0244,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -5695,7 +5647,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.043,
+      "probability": 0.0527,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -5705,7 +5657,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0652,
+      "probability": 0.0799,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -5821,7 +5773,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0388,
+      "probability": 0.058,
       "baseRate": 0.0196,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -5831,17 +5783,17 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0406,
+      "probability": 0.0613,
       "baseRate": 0.0382,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "elevated",
+      "alertsLevel": "elevated",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 120,
-      "probability": 0.062,
+      "probability": 0.0904,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -5851,7 +5803,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0865,
+      "probability": 0.1249,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -6185,7 +6137,7 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 3,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -6518,7 +6470,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.1526,
+      "probability": 0.2301,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -6528,13 +6480,13 @@
      },
      {
       "minutes": 60,
-      "probability": 0.3232,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
@@ -7109,17 +7061,17 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0362,
+      "probability": 0.0832,
       "baseRate": 0.0196,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 60,
-      "probability": 0.0795,
+      "probability": 0.1392,
       "baseRate": 0.0382,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -7129,7 +7081,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.1678,
+      "probability": 0.2741,
       "baseRate": 0.0736,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -7139,10 +7091,10 @@
      },
      {
       "minutes": 180,
-      "probability": 0.2545,
+      "probability": 0.382,
       "baseRate": 0.1057,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
@@ -7304,30 +7256,30 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0566,
+      "probability": 0.0864,
       "baseRate": 0.0196,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 60,
-      "probability": 0.1216,
+      "probability": 0.1896,
       "baseRate": 0.0382,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 120,
-      "probability": 0.2758,
+      "probability": 0.3999,
       "baseRate": 0.0736,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
@@ -7485,7 +7437,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0845,
+      "probability": 0.1846,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -7495,7 +7447,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.1774,
+      "probability": 0.3599,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
@@ -7505,23 +7457,23 @@
      },
      {
       "minutes": 120,
-      "probability": 0.2477,
+      "probability": 0.4,
       "baseRate": 0.0736,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.3118,
+      "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -7666,7 +7618,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0937,
+      "probability": 0.1366,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -7676,7 +7628,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.1866,
+      "probability": 0.2636,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
@@ -7686,23 +7638,23 @@
      },
      {
       "minutes": 120,
-      "probability": 0.2928,
+      "probability": 0.3901,
       "baseRate": 0.0736,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 180,
-      "probability": 0.3634,
+      "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -7831,52 +7783,28 @@
     ]
    },
    "expected": {
-    "mode": "quiet",
-    "status": "elevated",
+    "mode": "alert",
+    "status": "alert",
     "level": "yellow",
     "since": "2026-06-13T11:36:07Z",
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 1,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0358,
-      "baseRate": 0.0196,
-      "level": "elevated",
-      "alertsLevel": "elevated",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.6842105263157895
      },
      {
       "minutes": 60,
-      "probability": 0.0397,
-      "baseRate": 0.0382,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.5263157894736842
      },
      {
       "minutes": 120,
-      "probability": 0.0544,
-      "baseRate": 0.0736,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.3157894736842105
      },
      {
       "minutes": 180,
-      "probability": 0.0761,
-      "baseRate": 0.1057,
-      "level": "none",
-      "alertsLevel": "none",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": false
+      "probability": 0.15789473684210525
      }
     ]
    }
@@ -8175,7 +8103,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0959,
+      "probability": 0.2035,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -8185,33 +8113,33 @@
      },
      {
       "minutes": 60,
-      "probability": 0.2233,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.2828,
+      "probability": 0.4,
       "baseRate": 0.0736,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.3897,
+      "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -8253,12 +8181,12 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 1,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0051,
+      "probability": 0.0124,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -8268,7 +8196,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0106,
+      "probability": 0.0339,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -8278,7 +8206,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.0246,
+      "probability": 0.0665,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -8288,7 +8216,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0383,
+      "probability": 0.0932,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -8514,48 +8442,48 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 1,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0548,
+      "probability": 0.2814,
       "baseRate": 0.0196,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 60,
-      "probability": 0.1254,
+      "probability": 0.4,
       "baseRate": 0.0382,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.2018,
+      "probability": 0.4,
       "baseRate": 0.0736,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.2827,
+      "probability": 0.4,
       "baseRate": 0.1057,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -8828,48 +8756,48 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 0,
+    "oblastRaionsActive": 1,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.1711,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
-      "probability": 0.1797,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.2588,
+      "probability": 0.4,
       "baseRate": 0.0736,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
-      "probability": 0.3451,
+      "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      }
     ]
    }
@@ -8922,7 +8850,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0139,
+      "probability": 0.0256,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -8932,7 +8860,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0253,
+      "probability": 0.0463,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -8942,7 +8870,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.0535,
+      "probability": 0.0924,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -8952,7 +8880,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0709,
+      "probability": 0.1231,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -9515,7 +9443,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0099,
+      "probability": 0.0154,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -9525,7 +9453,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0217,
+      "probability": 0.0341,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -9535,7 +9463,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.0437,
+      "probability": 0.0595,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -9545,7 +9473,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0657,
+      "probability": 0.0895,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -9840,7 +9768,7 @@
     "status": "alert",
     "level": "red",
     "since": "2026-05-30T13:29:59Z",
-    "oblastRaionsActive": 2,
+    "oblastRaionsActive": 3,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -10015,7 +9943,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.2859,
+      "probability": 0.3889,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -10025,23 +9953,23 @@
      },
      {
       "minutes": 60,
-      "probability": 0.3303,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.3757,
+      "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
@@ -10288,7 +10216,7 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 2,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -10572,7 +10500,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.1393,
+      "probability": 0.1493,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -10582,7 +10510,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.2108,
+      "probability": 0.2389,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
@@ -10592,7 +10520,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.2687,
+      "probability": 0.2915,
       "baseRate": 0.0736,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -10602,7 +10530,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.3684,
+      "probability": 0.3915,
       "baseRate": 0.1057,
       "level": "high",
       "alertsLevel": "high",
@@ -10824,38 +10752,38 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 2,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.2342,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
-      "probability": 0.391,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
-      "probability": 0.3993,
+      "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
@@ -11122,13 +11050,13 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.3916,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
@@ -11465,7 +11393,7 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 2,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -11781,52 +11709,28 @@
     "oblasts": []
    },
    "expected": {
-    "mode": "quiet",
-    "status": "elevated",
+    "mode": "alert",
+    "status": "alert",
     "level": "yellow",
     "since": "2026-02-15T17:24:44Z",
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 3,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.4,
-      "baseRate": 0.0196,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.45348837209302323
      },
      {
       "minutes": 60,
-      "probability": 0.4,
-      "baseRate": 0.0382,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.2751937984496124
      },
      {
       "minutes": 120,
-      "probability": 0.4,
-      "baseRate": 0.0736,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.13565891472868216
      },
      {
       "minutes": 180,
-      "probability": 0.4,
-      "baseRate": 0.1057,
-      "level": "high",
-      "alertsLevel": "high",
-      "targetsLevel": null,
-      "raisedByTargets": false,
-      "atCap": true
+      "probability": 0.08914728682170543
      }
     ]
    }
@@ -12076,7 +11980,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.2011,
+      "probability": 0.2474,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -12086,7 +11990,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.3092,
+      "probability": 0.3923,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
@@ -12096,13 +12000,13 @@
      },
      {
       "minutes": 120,
-      "probability": 0.3733,
+      "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 180,
@@ -12434,7 +12338,7 @@
     "status": "alert",
     "level": "red",
     "since": "2026-02-21T15:36:35Z",
-    "oblastRaionsActive": 3,
+    "oblastRaionsActive": 4,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -12540,7 +12444,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0108,
+      "probability": 0.0199,
       "baseRate": 0.0196,
       "level": "none",
       "alertsLevel": "none",
@@ -12550,7 +12454,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0224,
+      "probability": 0.0411,
       "baseRate": 0.0382,
       "level": "none",
       "alertsLevel": "none",
@@ -12560,7 +12464,7 @@
      },
      {
       "minutes": 120,
-      "probability": 0.0498,
+      "probability": 0.0863,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -12570,7 +12474,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0736,
+      "probability": 0.1275,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -12828,18 +12732,18 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 2,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.3824,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
@@ -13065,7 +12969,7 @@
     "status": "alert",
     "level": "red",
     "since": "2026-05-04T15:35:57Z",
-    "oblastRaionsActive": 1,
+    "oblastRaionsActive": 3,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -13388,23 +13292,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.2844,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
-      "probability": 0.3508,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
@@ -13659,7 +13563,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0368,
+      "probability": 0.0738,
       "baseRate": 0.0196,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -13669,7 +13573,7 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0627,
+      "probability": 0.1313,
       "baseRate": 0.0382,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -13679,20 +13583,20 @@
      },
      {
       "minutes": 120,
-      "probability": 0.1079,
+      "probability": 0.1813,
       "baseRate": 0.0736,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "elevated",
+      "alertsLevel": "elevated",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 180,
-      "probability": 0.1541,
+      "probability": 0.2508,
       "baseRate": 0.1057,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "elevated",
+      "alertsLevel": "elevated",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
@@ -13856,7 +13760,7 @@
     "status": "none",
     "level": null,
     "since": null,
-    "oblastRaionsActive": 2,
+    "oblastRaionsActive": 3,
     "oblastRaionsTotal": 6,
     "horizons": [
      {
@@ -13867,7 +13771,7 @@
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
@@ -14337,7 +14241,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.2536,
+      "probability": 0.3599,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -14347,13 +14251,13 @@
      },
      {
       "minutes": 60,
-      "probability": 0.3448,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
@@ -14545,7 +14449,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.084,
+      "probability": 0.1503,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -14555,17 +14459,17 @@
      },
      {
       "minutes": 60,
-      "probability": 0.1255,
+      "probability": 0.2173,
       "baseRate": 0.0382,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 120,
-      "probability": 0.1771,
+      "probability": 0.2615,
       "baseRate": 0.0736,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -14575,10 +14479,10 @@
      },
      {
       "minutes": 180,
-      "probability": 0.2653,
+      "probability": 0.3762,
       "baseRate": 0.1057,
-      "level": "elevated",
-      "alertsLevel": "elevated",
+      "level": "high",
+      "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
@@ -15189,7 +15093,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.0336,
+      "probability": 0.0412,
       "baseRate": 0.0196,
       "level": "elevated",
       "alertsLevel": "elevated",
@@ -15199,17 +15103,17 @@
      },
      {
       "minutes": 60,
-      "probability": 0.0488,
+      "probability": 0.0602,
       "baseRate": 0.0382,
-      "level": "none",
-      "alertsLevel": "none",
+      "level": "elevated",
+      "alertsLevel": "elevated",
       "targetsLevel": null,
       "raisedByTargets": false,
       "atCap": false
      },
      {
       "minutes": 120,
-      "probability": 0.0699,
+      "probability": 0.0854,
       "baseRate": 0.0736,
       "level": "none",
       "alertsLevel": "none",
@@ -15219,7 +15123,7 @@
      },
      {
       "minutes": 180,
-      "probability": 0.0989,
+      "probability": 0.1205,
       "baseRate": 0.1057,
       "level": "none",
       "alertsLevel": "none",
@@ -15335,7 +15239,7 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.1885,
+      "probability": 0.2671,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
@@ -15345,13 +15249,13 @@
      },
      {
       "minutes": 60,
-      "probability": 0.3137,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,
@@ -15634,23 +15538,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.3988,
+      "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 60,
-      "probability": 0.3988,
+      "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
       "alertsLevel": "high",
       "targetsLevel": null,
       "raisedByTargets": false,
-      "atCap": false
+      "atCap": true
      },
      {
       "minutes": 120,

@@ -1,7 +1,7 @@
 // Page behaviour: fetches official alerts and air targets from NEPTUN, computes the
 // forecast in the browser (forecast.js, targets.js) and renders it. There is no server of our own.
-import { buildForecast } from "./forecast.js?v=2";
-import { evaluateTargets } from "./targets.js?v=2";
+import { buildForecast } from "./forecast.js?v=3";
+import { evaluateTargets } from "./targets.js?v=3";
 
 const ALERTS_URL = "https://neptun.in.ua/api/v1/alerts";
 const THREATS_URL = "https://neptun.in.ua/api/v1/threats";
@@ -14,6 +14,7 @@ const MEMORY_MAX_GAP_MS = 180000;
 const MEMORY_KEEP_MS = 6 * 3600000;
 
 const LEVELS = { none: "Ознак загрози не видно", elevated: "Підвищена", high: "Висока", very_high: "Дуже висока" };
+const ALERT_LEVELS = { red: "червоний рівень", yellow: "жовтий рівень" };
 const HORIZON = { 30: "30 хв", 60: "1 година", 120: "2 години", 180: "3 години" };
 const timeFmt = new Intl.DateTimeFormat("uk-UA", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Kyiv" });
 const $ = (id) => document.getElementById(id);
@@ -79,10 +80,10 @@ function renderStatus(d, now, endedAt) {
   let cls, title, detail = "";
   if (a.status === "alert") {
     cls = "alert"; title = "Повітряна тривога";
-    if (a.since) detail = `з ${clock(a.since)}, триває ${span(minutesSince(a.since, now))}`;
-  } else if (a.status === "elevated") {
-    cls = "elevated"; title = "Підвищена небезпека";
-    detail = `Рівень «${a.level || "?"}»${a.since ? ` з ${clock(a.since)}` : ""}. Сирена не оголошена.`;
+    const parts = [];
+    if (ALERT_LEVELS[a.level]) parts.push(ALERT_LEVELS[a.level]);
+    if (a.since) parts.push(`з ${clock(a.since)}, триває ${span(minutesSince(a.since, now))}`);
+    detail = parts.join(" · ");
   } else if (a.status === "none") {
     cls = "calm"; title = "Тривоги немає";
     if (endedAt && minutesSince(endedAt, now) <= 60) detail = `Відбій о ${clock(endedAt)}`;
