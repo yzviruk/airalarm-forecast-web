@@ -13,7 +13,7 @@ const MEMORY_KEY = "airalarm.target.v1";
 const MEMORY_MAX_GAP_MS = 180000;
 const MEMORY_KEEP_MS = 6 * 3600000;
 
-const LEVELS = { none: "Ознак загрози не видно", elevated: "Підвищена", high: "Висока", very_high: "Дуже висока" };
+const LEVELS = { none: "Не вище звичайного", elevated: "Підвищена", high: "Висока", very_high: "Дуже висока" };
 const ALERT_LEVELS = { red: "червоний рівень (ракетна небезпека)", yellow: "жовтий рівень (загроза БпЛА)" };
 const HORIZON = { 30: "30 хв", 60: "1 година", 120: "2 години", 180: "3 години" };
 const timeFmt = new Intl.DateTimeFormat("uk-UA", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Kyiv" });
