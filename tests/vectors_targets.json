@@ -1,0 +1,6527 @@
+{
+ "modelVersion": "B0-2026-11",
+ "cases": [
+  {
+   "name": "no targets",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 0,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "straight at us from the east",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 30.82931111111111,
+     "heading": 270,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.3922,
+     "60": 0.4217,
+     "120": 0.423,
+     "180": 0.423
+    },
+    "level": {
+     "30": "elevated",
+     "60": "elevated",
+     "120": "elevated",
+     "180": "elevated"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 171,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 20,
+      "ageMin": 0,
+      "p": {
+       "30": 0.392,
+       "60": 0.422,
+       "120": 0.423,
+       "180": 0.423
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "flying away",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 30.82931111111111,
+     "heading": 90,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "course unknown",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 30.82931111111111,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.1215,
+     "60": 0.1341,
+     "120": 0.1341,
+     "180": 0.1341
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 171,
+      "direction": "E",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 25,
+      "ageMin": 0,
+      "p": {
+       "30": 0.122,
+       "60": 0.134,
+       "120": 0.134,
+       "180": 0.134
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "already inside the zone",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.278145045045044,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 1.0,
+     "60": 1.0,
+     "120": 1.0,
+     "180": 1.0
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 11,
+      "direction": "NE",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 0,
+      "p": {
+       "30": 1.0,
+       "60": 1.0,
+       "120": 1.0,
+       "180": 1.0
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "too far to arrive",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 49.30153333333333,
+     "heading": 270,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "missile from far away",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 50.1340009009009,
+     "lon": 35.412644444444446,
+     "heading": 260,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0209,
+     "60": 0.1103,
+     "120": 0.1103,
+     "180": 0.1103
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 509,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 35,
+      "ageMin": 0,
+      "p": {
+       "30": 0.021,
+       "60": 0.11,
+       "120": 0.11,
+       "180": 0.11
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "presumptive course, approximate position",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 31.94042222222222,
+     "heading": 270,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 25,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0617,
+     "120": 0.0724,
+     "180": 0.0724
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 252,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": true,
+      "etaMin": 50,
+      "ageMin": 0,
+      "p": {
+       "30": 0.0,
+       "60": 0.062,
+       "120": 0.072,
+       "180": 0.072
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "reported velocity and trail",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 47.881748648648646,
+     "lon": 31.245977777777778,
+     "heading": 10,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 310.0,
+      "speedKmh": 160.5
+     },
+     "trail": [
+      {
+       "lat": 47.2331,
+       "lon": 31.9682,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0679,
+     "120": 0.126,
+     "180": 0.126
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 254,
+      "direction": "SE",
+      "course": "toward",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 60,
+      "ageMin": 0,
+      "p": {
+       "30": 0.0,
+       "60": 0.068,
+       "120": 0.126,
+       "180": 0.126
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "course from the trail only",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 50.584451351351355,
+     "lon": 30.55153333333333,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 51.2331,
+       "lon": 31.4682,
+       "t": "x"
+      },
+      {
+       "lat": 50.8331,
+       "lon": 30.9682,
+       "t": "y"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.1709,
+     "120": 0.1873,
+     "180": 0.1873
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 212,
+      "direction": "NE",
+      "course": "toward",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 45,
+      "ageMin": 0,
+      "p": {
+       "30": 0.0,
+       "60": 0.171,
+       "120": 0.187,
+       "180": 0.187
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "nonsense velocity is clamped",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 32.63486666666667,
+     "heading": 270,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 270,
+      "speedKmh": 5000
+     }
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.1372,
+     "120": 0.1437,
+     "180": 0.1437
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 302,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 50,
+      "ageMin": 0,
+      "p": {
+       "30": 0.0,
+       "60": 0.137,
+       "120": 0.144,
+       "180": 0.144
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "not updated for 20 minutes",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 30.82931111111111,
+     "heading": 270,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:40:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.4347,
+     "60": 0.4356,
+     "120": 0.4356,
+     "180": 0.4356
+    },
+    "level": {
+     "30": "elevated",
+     "60": "elevated",
+     "120": "elevated",
+     "180": "elevated"
+    },
+    "targets": [
+     {
+      "id": "a",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place a",
+      "region": "region",
+      "count": null,
+      "distanceKm": 171,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 20,
+      "p": {
+       "30": 0.435,
+       "60": 0.436,
+       "120": 0.436,
+       "180": 0.436
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "not updated for too long",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "a",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place a",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 30.82931111111111,
+     "heading": 270,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:10:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 0,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "special types and junk",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "f",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place f",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "k",
+     "type": "kab",
+     "title": "БпЛА",
+     "locality": "place k",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "resolved",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "o",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place o",
+     "region": "B",
+     "lat": 49.2331,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "areaOnly": true
+    },
+    {
+     "id": "o2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place o2",
+     "region": "A",
+     "lat": 49.2331,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "areaOnly": true
+    },
+    {
+     "id": "o3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place o3",
+     "region": "A",
+     "lat": 49.2331,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "areaOnly": true
+    },
+    {
+     "id": "b",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place b",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 32.63486666666667,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "m",
+     "type": "mig31k",
+     "title": "БпЛА",
+     "locality": "place m",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 40.968199999999996,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "n",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place n",
+     "region": "region",
+     "lat": null,
+     "lon": 28.60708888888889,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    "junk",
+    null,
+    {
+     "id": "u",
+     "type": "something-new",
+     "title": "БпЛА",
+     "locality": "place u",
+     "region": "region",
+     "lat": 49.683550450450454,
+     "lon": 31.245977777777778,
+     "heading": 255,
+     "status": "active",
+     "updatedAt": null,
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "c",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place c",
+     "region": "region",
+     "lat": 49.503370270270274,
+     "lon": 25.9682,
+     "heading": 85,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "count": 3
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0032,
+     "60": 0.275,
+     "120": 0.3014,
+     "180": 0.302
+    },
+    "level": {
+     "30": "none",
+     "60": "elevated",
+     "120": "elevated",
+     "180": "elevated"
+    },
+    "targets": [
+     {
+      "id": "u",
+      "type": "something-new",
+      "title": "БпЛА",
+      "locality": "place u",
+      "region": "region",
+      "count": null,
+      "distanceKm": 207,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 40,
+      "ageMin": 0,
+      "p": {
+       "30": 0.003,
+       "60": 0.227,
+       "120": 0.229,
+       "180": 0.229
+      }
+     },
+     {
+      "id": "c",
+      "type": "recon",
+      "title": "БпЛА",
+      "locality": "place c",
+      "region": "region",
+      "count": 3,
+      "distanceKm": 183,
+      "direction": "W",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 60,
+      "ageMin": 0,
+      "p": {
+       "30": 0.0,
+       "60": 0.062,
+       "120": 0.094,
+       "180": 0.095
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "A",
+      "count": 2
+     },
+     {
+      "region": "B",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": true
+   }
+  },
+  {
+   "name": "many targets, more than the list shows",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "t0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t0",
+     "region": "region",
+     "lat": 48.51237927927928,
+     "lon": 30.412644444444442,
+     "heading": 265,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t1",
+     "region": "region",
+     "lat": 48.69255945945946,
+     "lon": 30.57931111111111,
+     "heading": 268,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t2",
+     "region": "region",
+     "lat": 48.87273963963964,
+     "lon": 30.745977777777778,
+     "heading": 271,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t3",
+     "region": "region",
+     "lat": 49.05291981981982,
+     "lon": 30.912644444444446,
+     "heading": 274,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t4",
+     "region": "region",
+     "lat": 49.2331,
+     "lon": 31.07931111111111,
+     "heading": 277,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t5",
+     "region": "region",
+     "lat": 49.41328018018018,
+     "lon": 31.245977777777778,
+     "heading": 280,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t6",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t6",
+     "region": "region",
+     "lat": 49.59346036036036,
+     "lon": 31.412644444444446,
+     "heading": 283,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t7",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t7",
+     "region": "region",
+     "lat": 49.77364054054054,
+     "lon": 31.57931111111111,
+     "heading": 286,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "t8",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place t8",
+     "region": "region",
+     "lat": 49.95382072072072,
+     "lon": 31.745977777777778,
+     "heading": 289,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.7195,
+     "60": 0.9073,
+     "120": 0.9103,
+     "180": 0.9104
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "t3",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place t3",
+      "region": "region",
+      "count": null,
+      "distanceKm": 179,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 25,
+      "ageMin": 0,
+      "p": {
+       "30": 0.302,
+       "60": 0.359,
+       "120": 0.36,
+       "180": 0.36
+      }
+     },
+     {
+      "id": "t2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place t2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 171,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 20,
+      "ageMin": 0,
+      "p": {
+       "30": 0.286,
+       "60": 0.325,
+       "120": 0.326,
+       "180": 0.326
+      }
+     },
+     {
+      "id": "t1",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place t1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 165,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 25,
+      "ageMin": 0,
+      "p": {
+       "30": 0.223,
+       "60": 0.3,
+       "120": 0.302,
+       "180": 0.302
+      }
+     },
+     {
+      "id": "t4",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place t4",
+      "region": "region",
+      "count": null,
+      "distanceKm": 190,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 30,
+      "ageMin": 0,
+      "p": {
+       "30": 0.148,
+       "60": 0.296,
+       "120": 0.297,
+       "180": 0.297
+      }
+     },
+     {
+      "id": "t5",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place t5",
+      "region": "region",
+      "count": null,
+      "distanceKm": 202,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 35,
+      "ageMin": 0,
+      "p": {
+       "30": 0.034,
+       "60": 0.241,
+       "120": 0.242,
+       "180": 0.242
+      }
+     },
+     {
+      "id": "t0",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place t0",
+      "region": "region",
+      "count": null,
+      "distanceKm": 163,
+      "direction": "SE",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 30,
+      "ageMin": 0,
+      "p": {
+       "30": 0.119,
+       "60": 0.2,
+       "120": 0.202,
+       "180": 0.202
+      }
+     }
+    ],
+    "listedTotal": 9,
+    "simulated": 9,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 1",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r0_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r0_0",
+     "region": "region",
+     "lat": 49.56395105768181,
+     "lon": 27.111561781920578,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r0_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r0_1",
+     "region": "region",
+     "lat": 51.4246115572731,
+     "lon": 22.80417526399428,
+     "heading": 94.187,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 244.6,
+      "speedKmh": 783.7
+     }
+    },
+    {
+     "id": "r0_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r0_2",
+     "region": "region",
+     "lat": 51.042776365852575,
+     "lon": 27.143928521286806,
+     "heading": 287.337,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "areaOnly": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.1907,
+     "60": 0.1922,
+     "120": 0.1922,
+     "180": 0.1923
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r0_0",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r0_0",
+      "region": "region",
+      "count": null,
+      "distanceKm": 105,
+      "direction": "W",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 22,
+      "p": {
+       "30": 0.191,
+       "60": 0.192,
+       "120": 0.192,
+       "180": 0.192
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 2",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r1_0",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r1_0",
+     "region": "region",
+     "lat": 47.10576761016937,
+     "lon": 24.18614762278521,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.003,
+     "180": 0.0032
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 3",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r2_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r2_0",
+     "region": "region",
+     "lat": 51.53980578081937,
+     "lon": 26.288769211029702,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r2_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r2_1",
+     "region": "region",
+     "lat": 51.43216014183477,
+     "lon": 32.32954545678616,
+     "heading": 264.611,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r2_2",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r2_2",
+     "region": "region",
+     "lat": 52.10976567916602,
+     "lon": 30.259676602248753,
+     "heading": 323.476,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 52.035099605298655,
+       "lon": 34.13378930281888,
+       "t": "x"
+      },
+      {
+       "lat": 46.315444398149886,
+       "lon": 28.821868499331625,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 0,
+    "staleIgnored": 2,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 4",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r3_0",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r3_0",
+     "region": "region",
+     "lat": 47.65589460639928,
+     "lon": 28.766717788753287,
+     "heading": 58.202,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r3_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r3_1",
+     "region": "region",
+     "lat": 46.20649285211125,
+     "lon": 33.56203606157467,
+     "heading": 333.305,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 52.871478239073575,
+       "lon": 27.39301838105537,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r3_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r3_2",
+     "region": "region",
+     "lat": 50.47492187128133,
+     "lon": 33.16169394766246,
+     "heading": 81.912,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r3_3",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r3_3",
+     "region": "region",
+     "lat": 47.9930554362673,
+     "lon": 30.754103122902514,
+     "heading": 230.192,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 2,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 5",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r4_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r4_0",
+     "region": "region",
+     "lat": 50.45368275183624,
+     "lon": 23.23174716075804,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "areaOnly": true
+    },
+    {
+     "id": "r4_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r4_1",
+     "region": "region",
+     "lat": 46.17399547629297,
+     "lon": 23.532948904128,
+     "heading": 201.082,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 6",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r5_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r5_0",
+     "region": "region",
+     "lat": 51.92157462609782,
+     "lon": 27.336764414178678,
+     "heading": 138.891,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 47.33491672426395,
+       "lon": 26.28516110736137,
+       "t": "x"
+      },
+      {
+       "lat": 49.6650280078853,
+       "lon": 23.723448221845427,
+       "t": "x"
+      },
+      {
+       "lat": 49.19440585172497,
+       "lon": 32.498242457971514,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r5_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r5_1",
+     "region": "region",
+     "lat": 46.38701827843516,
+     "lon": 27.25759798343629,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r5_2",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r5_2",
+     "region": "region",
+     "lat": 48.676847696360305,
+     "lon": 27.255102049962378,
+     "heading": 47.566,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r5_3",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r5_3",
+     "region": "region",
+     "lat": 50.27981488742088,
+     "lon": 34.615450889910505,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r5_4",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r5_4",
+     "region": "region",
+     "lat": 50.96792795616657,
+     "lon": 23.257309036840862,
+     "heading": 267.006,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 288.8,
+      "speedKmh": 479.5
+     }
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.771,
+     "60": 0.7719,
+     "120": 0.7727,
+     "180": 0.7727
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r5_2",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r5_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 108,
+      "direction": "SW",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 5,
+      "ageMin": 0,
+      "p": {
+       "30": 0.771,
+       "60": 0.771,
+       "120": 0.771,
+       "180": 0.771
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 3,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 7",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r6_0",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r6_0",
+     "region": "region",
+     "lat": 49.74201192189423,
+     "lon": 31.103702525880834,
+     "heading": 52.025,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r6_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r6_1",
+     "region": "region",
+     "lat": 51.65938834281181,
+     "lon": 32.00049840134619,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r6_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r6_2",
+     "region": "region",
+     "lat": 51.069879493848894,
+     "lon": 30.42064091348236,
+     "heading": 272.754,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r6_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r6_3",
+     "region": "region",
+     "lat": 47.97658350090326,
+     "lon": 30.901343713301966,
+     "heading": 294.597,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "areaOnly": true
+    },
+    {
+     "id": "r6_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r6_4",
+     "region": "region",
+     "lat": 46.63332333258735,
+     "lon": 22.292492347392503,
+     "heading": 249.819,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r6_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r6_5",
+     "region": "region",
+     "lat": 47.84959748834094,
+     "lon": 27.858784195542864,
+     "heading": 48.734,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0785,
+     "60": 0.2084,
+     "120": 0.2303,
+     "180": 0.2305
+    },
+    "level": {
+     "30": "none",
+     "60": "elevated",
+     "120": "elevated",
+     "180": "elevated"
+    },
+    "targets": [
+     {
+      "id": "r6_5",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r6_5",
+      "region": "region",
+      "count": null,
+      "distanceKm": 160,
+      "direction": "S",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 40,
+      "ageMin": 0,
+      "p": {
+       "30": 0.076,
+       "60": 0.189,
+       "120": 0.203,
+       "180": 0.203
+      }
+     },
+     {
+      "id": "r6_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r6_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 247,
+      "direction": "NE",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 50,
+      "ageMin": 22,
+      "p": {
+       "30": 0.003,
+       "60": 0.024,
+       "120": 0.032,
+       "180": 0.032
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 4,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 8",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r7_0",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r7_0",
+     "region": "region",
+     "lat": 48.718943873043706,
+     "lon": 28.977210017595972,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r7_1",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r7_1",
+     "region": "region",
+     "lat": 47.01880658260329,
+     "lon": 28.803244327838883,
+     "heading": 330.978,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r7_2",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r7_2",
+     "region": "region",
+     "lat": 47.49537457271918,
+     "lon": 25.708101588946196,
+     "heading": 96.665,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 50.733297414607726,
+       "lon": 29.960663254186368,
+       "t": "x"
+      },
+      {
+       "lat": 47.5441042226338,
+       "lon": 22.764185398448646,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r7_3",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r7_3",
+     "region": "region",
+     "lat": 50.35300379622219,
+     "lon": 31.807597907918847,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 51.19238127147133,
+       "lon": 27.237061265369693,
+       "t": "x"
+      },
+      {
+       "lat": 46.251967058541695,
+       "lon": 22.625442551802575,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r7_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r7_4",
+     "region": "region",
+     "lat": 46.288242358892745,
+     "lon": 31.568989422725718,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r7_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r7_5",
+     "region": "region",
+     "lat": 49.24596126806276,
+     "lon": 32.01904507403243,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 69.9,
+      "speedKmh": 798.8
+     }
+    },
+    {
+     "id": "r7_6",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r7_6",
+     "region": "region",
+     "lat": 49.70344814243854,
+     "lon": 34.1828736220975,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0034,
+     "180": 0.0045
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 3,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 9",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r8_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r8_0",
+     "region": "region",
+     "lat": 46.415872559407276,
+     "lon": 24.23581298223786,
+     "heading": 145.287,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 237.6,
+      "speedKmh": 736.4
+     }
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 10",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r9_0",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r9_0",
+     "region": "region",
+     "lat": 48.14442092949908,
+     "lon": 22.635183187699866,
+     "heading": 167.322,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r9_1",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r9_1",
+     "region": "region",
+     "lat": 51.97415511976031,
+     "lon": 26.51489066790572,
+     "heading": 97.326,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 271.5,
+      "speedKmh": 629.2
+     },
+     "trail": [
+      {
+       "lat": 51.414455693992146,
+       "lon": 28.25651680287483,
+       "t": "x"
+      },
+      {
+       "lat": 52.43692253595204,
+       "lon": 24.81601867884459,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r9_2",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r9_2",
+     "region": "region",
+     "lat": 51.125988084189785,
+     "lon": 32.94350850245553,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 45.74540674672331,
+       "lon": 24.115522625667904,
+       "t": "x"
+      },
+      {
+       "lat": 51.36264654128494,
+       "lon": 29.67099531752568,
+       "t": "x"
+      },
+      {
+       "lat": 47.90041699819473,
+       "lon": 34.411675225301025,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r9_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r9_3",
+     "region": "region",
+     "lat": 49.43657411019203,
+     "lon": 25.318687766378325,
+     "heading": 205.937,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r9_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r9_4",
+     "region": "region",
+     "lat": 46.500646279102504,
+     "lon": 28.141088156213275,
+     "heading": 247.849,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 51.99494283603701,
+       "lon": 23.92465201366006,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r9_5",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r9_5",
+     "region": "region",
+     "lat": 51.36801073067404,
+     "lon": 32.92750426731913,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.008,
+     "60": 0.008,
+     "120": 0.0087,
+     "180": 0.0088
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 4,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 11",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r10_0",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r10_0",
+     "region": "region",
+     "lat": 50.2837670684802,
+     "lon": 26.645391569084893,
+     "heading": 247.685,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r10_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r10_1",
+     "region": "region",
+     "lat": 50.41355559701223,
+     "lon": 34.45559164557898,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 137.1,
+      "speedKmh": 143.1
+     }
+    },
+    {
+     "id": "r10_2",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r10_2",
+     "region": "region",
+     "lat": 49.52385523420806,
+     "lon": 23.05456989962906,
+     "heading": 349.233,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 46.162408146202424,
+       "lon": 23.58263672390771,
+       "t": "x"
+      },
+      {
+       "lat": 50.66462005014114,
+       "lon": 28.309850502728423,
+       "t": "x"
+      },
+      {
+       "lat": 49.7695651047986,
+       "lon": 29.751277043493793,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0006
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 12",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r11_0",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r11_0",
+     "region": "region",
+     "lat": 50.97045959119375,
+     "lon": 27.650280195248524,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "areaOnly": true
+    },
+    {
+     "id": "r11_1",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r11_1",
+     "region": "region",
+     "lat": 49.73816805946378,
+     "lon": 32.1132985146935,
+     "heading": 103.724,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r11_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r11_2",
+     "region": "region",
+     "lat": 50.0774247431437,
+     "lon": 28.198350247716757,
+     "heading": 167.669,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r11_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r11_3",
+     "region": "region",
+     "lat": 46.936684800861386,
+     "lon": 31.887243921823423,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r11_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r11_4",
+     "region": "region",
+     "lat": 48.62396746282131,
+     "lon": 32.933619707525466,
+     "heading": 248.658,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 279.1,
+      "speedKmh": 417.6
+     },
+     "trail": [
+      {
+       "lat": 45.915129353894876,
+       "lon": 24.32405637458604,
+       "t": "x"
+      },
+      {
+       "lat": 52.42874704655615,
+       "lon": 25.40090407321593,
+       "t": "x"
+      },
+      {
+       "lat": 49.673696000800156,
+       "lon": 27.57065474048538,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    },
+    {
+     "id": "r11_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r11_5",
+     "region": "region",
+     "lat": 47.39239750655594,
+     "lon": 31.19124513497719,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r11_6",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r11_6",
+     "region": "region",
+     "lat": 50.681061150896724,
+     "lon": 26.419708290247986,
+     "heading": 296.901,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.5411,
+     "60": 0.5411,
+     "120": 0.5411,
+     "180": 0.5411
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r11_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r11_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 96,
+      "direction": "N",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 44,
+      "p": {
+       "30": 0.541,
+       "60": 0.541,
+       "120": 0.541,
+       "180": 0.541
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 2,
+    "staleIgnored": 3,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 2
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 13",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r12_0",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r12_0",
+     "region": "region",
+     "lat": 50.76538530391792,
+     "lon": 32.67114591767667,
+     "heading": 350.403,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 45.45370108240186,
+       "lon": 30.21513950135144,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r12_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r12_1",
+     "region": "region",
+     "lat": 48.821703155391084,
+     "lon": 33.68451342266823,
+     "heading": 64.434,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r12_2",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r12_2",
+     "region": "region",
+     "lat": 49.311704853695765,
+     "lon": 29.463356892018883,
+     "heading": 242.112,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "areaOnly": true
+    },
+    {
+     "id": "r12_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r12_3",
+     "region": "region",
+     "lat": 47.17818691663548,
+     "lon": 24.82566109096123,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r12_4",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r12_4",
+     "region": "region",
+     "lat": 46.81006661134915,
+     "lon": 25.410612055680264,
+     "heading": 344.795,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r12_5",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r12_5",
+     "region": "region",
+     "lat": 48.84745725084447,
+     "lon": 22.83857158382887,
+     "heading": 300.648,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r12_6",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r12_6",
+     "region": "region",
+     "lat": 48.82472668823557,
+     "lon": 25.166943523627012,
+     "heading": 51.807,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 9.0,
+      "speedKmh": 657.1
+     }
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0021,
+     "180": 0.0035
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 3,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 14",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r13_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r13_0",
+     "region": "region",
+     "lat": 50.17832930943476,
+     "lon": 23.469635361166883,
+     "heading": 328.543,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r13_1",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r13_1",
+     "region": "region",
+     "lat": 47.31207729316226,
+     "lon": 30.72192440295943,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r13_2",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r13_2",
+     "region": "region",
+     "lat": 50.27956891479596,
+     "lon": 22.446153677521103,
+     "heading": 231.131,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 157.2,
+      "speedKmh": 325.1
+     }
+    },
+    {
+     "id": "r13_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r13_3",
+     "region": "region",
+     "lat": 47.72708119045183,
+     "lon": 24.749391811243438,
+     "heading": 118.13,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0096,
+     "180": 0.0108
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 2,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 15",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r14_0",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r14_0",
+     "region": "region",
+     "lat": 50.143795713403634,
+     "lon": 26.54337932324628,
+     "heading": 90.559,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 45.38057827029245,
+       "lon": 34.388864158064656,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 0,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 16",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r15_0",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r15_0",
+     "region": "region",
+     "lat": 46.767989161405744,
+     "lon": 27.257563310133396,
+     "heading": 266.186,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r15_1",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r15_1",
+     "region": "region",
+     "lat": 51.99220535450475,
+     "lon": 27.89355981299407,
+     "heading": 290.506,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r15_2",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r15_2",
+     "region": "region",
+     "lat": 48.0070957318037,
+     "lon": 28.82258323186481,
+     "heading": 285.273,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r15_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r15_3",
+     "region": "region",
+     "lat": 47.19187053042728,
+     "lon": 34.28636500703315,
+     "heading": 125.918,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 17",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r16_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r16_0",
+     "region": "region",
+     "lat": 48.58699208830881,
+     "lon": 31.460077546125987,
+     "heading": 225.783,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 51.877954905672695,
+       "lon": 23.13689464563108,
+       "t": "x"
+      },
+      {
+       "lat": 51.37857364256576,
+       "lon": 28.251457926302514,
+       "t": "x"
+      },
+      {
+       "lat": 52.22908108639412,
+       "lon": 23.432652478748675,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r16_1",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r16_1",
+     "region": "region",
+     "lat": 49.60198493367468,
+     "lon": 30.04125299804069,
+     "heading": 65.892,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r16_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r16_2",
+     "region": "region",
+     "lat": 49.226418956269754,
+     "lon": 22.966464247707414,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 132.2,
+      "speedKmh": 471.4
+     },
+     "trail": [
+      {
+       "lat": 52.770351703317075,
+       "lon": 24.73011399594585,
+       "t": "x"
+      },
+      {
+       "lat": 48.03529869479705,
+       "lon": 28.921714949726024,
+       "t": "x"
+      },
+      {
+       "lat": 50.76046258339109,
+       "lon": 32.88623586029138,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r16_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r16_3",
+     "region": "region",
+     "lat": 48.499405380246266,
+     "lon": 24.20004847457969,
+     "heading": 44.153,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "areaOnly": true
+    },
+    {
+     "id": "r16_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r16_4",
+     "region": "region",
+     "lat": 47.09292278280702,
+     "lon": 32.026576111801035,
+     "heading": 115.548,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r16_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r16_5",
+     "region": "region",
+     "lat": 48.53405320335322,
+     "lon": 23.450714733129708,
+     "heading": 31.954,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 109.8,
+      "speedKmh": 612.3
+     },
+     "areaOnly": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.3533,
+     "60": 0.3533,
+     "120": 0.3623,
+     "180": 0.3627
+    },
+    "level": {
+     "30": "elevated",
+     "60": "elevated",
+     "120": "elevated",
+     "180": "elevated"
+    },
+    "targets": [
+     {
+      "id": "r16_1",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r16_1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 121,
+      "direction": "E",
+      "course": "away",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 44,
+      "p": {
+       "30": 0.353,
+       "60": 0.353,
+       "120": 0.353,
+       "180": 0.353
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 4,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 2
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 18",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r17_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r17_0",
+     "region": "region",
+     "lat": 51.99067840519766,
+     "lon": 22.58604748475381,
+     "heading": 60.123,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 232.8,
+      "speedKmh": 334.3
+     },
+     "trail": [
+      {
+       "lat": 48.176551381552294,
+       "lon": 33.2827866992062,
+       "t": "x"
+      },
+      {
+       "lat": 47.625472941302924,
+       "lon": 26.807613655502152,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r17_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r17_1",
+     "region": "region",
+     "lat": 46.448327677389294,
+     "lon": 23.37282740984397,
+     "heading": 178.032,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r17_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r17_2",
+     "region": "region",
+     "lat": 47.45344226199966,
+     "lon": 29.47674683043723,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r17_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r17_3",
+     "region": "region",
+     "lat": 48.832320994558756,
+     "lon": 30.186353811211678,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 49.24090243400381,
+       "lon": 25.470725963235378,
+       "t": "x"
+      },
+      {
+       "lat": 52.211672221654005,
+       "lon": 29.257790600972697,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r17_4",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r17_4",
+     "region": "region",
+     "lat": 47.55785620688984,
+     "lon": 26.78851665272579,
+     "heading": 202.352,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 52.42697973940366,
+       "lon": 26.21271708107339,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r17_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r17_5",
+     "region": "region",
+     "lat": 51.93106772260938,
+     "lon": 31.096934293160093,
+     "heading": 4.033,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 54.8,
+      "speedKmh": 379.8
+     }
+    },
+    {
+     "id": "r17_6",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r17_6",
+     "region": "region",
+     "lat": 51.864213702948724,
+     "lon": 29.596198668044057,
+     "heading": 271.637,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 236.6,
+      "speedKmh": 199.7
+     },
+     "trail": [
+      {
+       "lat": 49.48085488070164,
+       "lon": 24.474909986373326,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0081,
+     "60": 0.0593,
+     "120": 0.0763,
+     "180": 0.0765
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r17_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r17_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 211,
+      "direction": "S",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": true,
+      "etaMin": 55,
+      "ageMin": 2,
+      "p": {
+       "30": 0.0,
+       "60": 0.03,
+       "120": 0.04,
+       "180": 0.04
+      }
+     },
+     {
+      "id": "r17_6",
+      "type": "recon",
+      "title": "БпЛА",
+      "locality": "place r17_6",
+      "region": "region",
+      "count": null,
+      "distanceKm": 303,
+      "direction": "N",
+      "course": "aside",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 55,
+      "ageMin": 22,
+      "p": {
+       "30": 0.003,
+       "60": 0.025,
+       "120": 0.033,
+       "180": 0.033
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 6,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 19",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r18_0",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r18_0",
+     "region": "region",
+     "lat": 47.10388090411177,
+     "lon": 34.69626436064328,
+     "heading": 56.28,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r18_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r18_1",
+     "region": "region",
+     "lat": 49.78707876834503,
+     "lon": 32.722548953116814,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 250.1,
+      "speedKmh": 817.3
+     }
+    },
+    {
+     "id": "r18_2",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r18_2",
+     "region": "region",
+     "lat": 49.86282676915146,
+     "lon": 25.676668752111233,
+     "heading": 146.112,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0275,
+     "60": 0.1182,
+     "120": 0.1221,
+     "180": 0.1221
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r18_1",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r18_1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 313,
+      "direction": "E",
+      "course": "toward",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 45,
+      "ageMin": 7,
+      "p": {
+       "30": 0.027,
+       "60": 0.118,
+       "120": 0.122,
+       "180": 0.122
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 20",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r19_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r19_0",
+     "region": "region",
+     "lat": 46.831737353630686,
+     "lon": 31.050491256933302,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r19_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r19_1",
+     "region": "region",
+     "lat": 46.99948810681071,
+     "lon": 28.387009359266443,
+     "heading": 110.492,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 315.9,
+      "speedKmh": 106.0
+     }
+    },
+    {
+     "id": "r19_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r19_2",
+     "region": "region",
+     "lat": 48.963651152146554,
+     "lon": 22.662094764917434,
+     "heading": 225.905,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 236.2,
+      "speedKmh": 694.9
+     },
+     "trail": [
+      {
+       "lat": 52.755333637253045,
+       "lon": 32.1210322985156,
+       "t": "x"
+      },
+      {
+       "lat": 49.80946625035955,
+       "lon": 26.852704049277616,
+       "t": "x"
+      },
+      {
+       "lat": 45.65665668913875,
+       "lon": 28.93355055967462,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r19_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r19_3",
+     "region": "region",
+     "lat": 48.88302936330602,
+     "lon": 33.36905947875358,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 112.0,
+      "speedKmh": 272.5
+     }
+    },
+    {
+     "id": "r19_4",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r19_4",
+     "region": "region",
+     "lat": 48.05099691785536,
+     "lon": 30.172320097731355,
+     "heading": 317.456,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r19_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r19_5",
+     "region": "region",
+     "lat": 48.74496513904558,
+     "lon": 25.246529181001232,
+     "heading": 232.609,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r19_6",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r19_6",
+     "region": "region",
+     "lat": 48.20596427394825,
+     "lon": 23.58206196690812,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.5331,
+     "60": 0.5361,
+     "120": 0.542,
+     "180": 0.5428
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r19_4",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r19_4",
+      "region": "region",
+      "count": null,
+      "distanceKm": 182,
+      "direction": "SE",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 10,
+      "ageMin": 0,
+      "p": {
+       "30": 0.533,
+       "60": 0.533,
+       "120": 0.533,
+       "180": 0.533
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 6,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 21",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r20_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r20_0",
+     "region": "region",
+     "lat": 49.61116825782621,
+     "lon": 33.06210875751718,
+     "heading": 82.013,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 50.60713441348645,
+       "lon": 25.26353643478814,
+       "t": "x"
+      },
+      {
+       "lat": 47.61319979032858,
+       "lon": 25.152095386180637,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r20_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r20_1",
+     "region": "region",
+     "lat": 50.414622827639505,
+     "lon": 29.57542745761339,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r20_2",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r20_2",
+     "region": "region",
+     "lat": 49.41222419047036,
+     "lon": 33.40936303590665,
+     "heading": 75.942,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.1231,
+     "60": 0.1402,
+     "120": 0.1408,
+     "180": 0.1408
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r20_1",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r20_1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 154,
+      "direction": "NE",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 20,
+      "ageMin": 7,
+      "p": {
+       "30": 0.123,
+       "60": 0.14,
+       "120": 0.141,
+       "180": 0.141
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 3,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 22",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r21_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r21_0",
+     "region": "region",
+     "lat": 51.96759376490331,
+     "lon": 27.601116098690447,
+     "heading": 279.772,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r21_1",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r21_1",
+     "region": "region",
+     "lat": 51.18872174884767,
+     "lon": 23.30316866257074,
+     "heading": 206.085,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r21_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r21_2",
+     "region": "region",
+     "lat": 48.75969060400009,
+     "lon": 29.93543598380938,
+     "heading": 357.824,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r21_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r21_3",
+     "region": "region",
+     "lat": 46.976048791522636,
+     "lon": 25.325666333002864,
+     "heading": 45.308,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 48.18731789909764,
+       "lon": 28.07302352754082,
+       "t": "x"
+      },
+      {
+       "lat": 50.50468832712372,
+       "lon": 25.807045651632333,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r21_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r21_4",
+     "region": "region",
+     "lat": 50.85973010854971,
+     "lon": 24.127497047012827,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 49.2026415067026,
+       "lon": 22.509024861564768,
+       "t": "x"
+      },
+      {
+       "lat": 46.22320035681395,
+       "lon": 23.87139024398487,
+       "t": "x"
+      },
+      {
+       "lat": 49.68040979296238,
+       "lon": 25.298827574723052,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    },
+    {
+     "id": "r21_5",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r21_5",
+     "region": "region",
+     "lat": 49.481455514665946,
+     "lon": 33.82603907122577,
+     "heading": 2.039,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 237.5,
+      "speedKmh": 194.2
+     },
+     "trail": [
+      {
+       "lat": 50.97034832534356,
+       "lon": 24.562185778921084,
+       "t": "x"
+      },
+      {
+       "lat": 52.01819001929567,
+       "lon": 34.42689768142058,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.668,
+     "60": 0.669,
+     "120": 0.6695,
+     "180": 0.67
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r21_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r21_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 119,
+      "direction": "SE",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 5,
+      "ageMin": 0,
+      "p": {
+       "30": 0.668,
+       "60": 0.669,
+       "120": 0.669,
+       "180": 0.669
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 4,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 23",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r22_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r22_0",
+     "region": "region",
+     "lat": 51.428467974297455,
+     "lon": 28.418102419356316,
+     "heading": 255.152,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 244.8,
+      "speedKmh": 465.1
+     }
+    },
+    {
+     "id": "r22_1",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r22_1",
+     "region": "region",
+     "lat": 47.51041159334989,
+     "lon": 22.977185612283762,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 61.0,
+      "speedKmh": 477.5
+     }
+    },
+    {
+     "id": "r22_2",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r22_2",
+     "region": "region",
+     "lat": 50.99716583386747,
+     "lon": 29.49450622825567,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 45.86361911992757,
+       "lon": 32.58307163553587,
+       "t": "x"
+      },
+      {
+       "lat": 46.698973814063734,
+       "lon": 27.67299846589596,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r22_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r22_3",
+     "region": "region",
+     "lat": 50.38006841722743,
+     "lon": 25.76251031115884,
+     "heading": 278.465,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 48.60399370836511,
+       "lon": 25.29909228529264,
+       "t": "x"
+      },
+      {
+       "lat": 49.25784279845042,
+       "lon": 25.70947892194921,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r22_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r22_4",
+     "region": "region",
+     "lat": 49.1060782765379,
+     "lon": 25.753346603288332,
+     "heading": 179.91,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 47.60266876706631,
+       "lon": 28.495574582643858,
+       "t": "x"
+      },
+      {
+       "lat": 51.28645960316181,
+       "lon": 30.97781796272184,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r22_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r22_5",
+     "region": "region",
+     "lat": 50.20740252788788,
+     "lon": 23.96841637430876,
+     "heading": 106.754,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r22_6",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r22_6",
+     "region": "region",
+     "lat": 51.60738204574674,
+     "lon": 30.4007443340214,
+     "heading": 358.399,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r22_7",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r22_7",
+     "region": "region",
+     "lat": 51.881565368929614,
+     "lon": 30.86333763423697,
+     "heading": 295.04,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 52.38234202202456,
+       "lon": 30.70586050471364,
+       "t": "x"
+      },
+      {
+       "lat": 49.4011027831741,
+       "lon": 31.165125415064495,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0318,
+     "120": 0.0393,
+     "180": 0.0394
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r22_0",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r22_0",
+      "region": "region",
+      "count": null,
+      "distanceKm": 244,
+      "direction": "N",
+      "course": "aside",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 50,
+      "ageMin": 0,
+      "p": {
+       "30": 0.0,
+       "60": 0.026,
+       "120": 0.029,
+       "180": 0.029
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 6,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 24",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r23_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r23_0",
+     "region": "region",
+     "lat": 50.0521470575836,
+     "lon": 31.88425381393709,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "areaOnly": true
+    },
+    {
+     "id": "r23_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r23_1",
+     "region": "region",
+     "lat": 47.05548517066661,
+     "lon": 30.347241754092455,
+     "heading": 234.72,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r23_2",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r23_2",
+     "region": "region",
+     "lat": 46.66780726915885,
+     "lon": 25.648425828187047,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r23_3",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r23_3",
+     "region": "region",
+     "lat": 49.135316302521154,
+     "lon": 30.75256234370893,
+     "heading": 355.365,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 312.7,
+      "speedKmh": 645.9
+     }
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0019,
+     "60": 0.0033,
+     "120": 0.0061,
+     "180": 0.0073
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 2,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 25",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r24_0",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r24_0",
+     "region": "region",
+     "lat": 48.55264213086537,
+     "lon": 31.40411903880228,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r24_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r24_1",
+     "region": "region",
+     "lat": 51.412532697899294,
+     "lon": 32.079667395958715,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 331.3,
+      "speedKmh": 370.6
+     },
+     "trail": [
+      {
+       "lat": 51.33920352161458,
+       "lon": 26.95980931337824,
+       "t": "x"
+      },
+      {
+       "lat": 50.427242045352536,
+       "lon": 33.56698030870148,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    },
+    {
+     "id": "r24_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r24_2",
+     "region": "region",
+     "lat": 50.956671854950024,
+     "lon": 31.283166061842035,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r24_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r24_3",
+     "region": "region",
+     "lat": 48.967775620914495,
+     "lon": 28.281910375745362,
+     "heading": 194.145,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 48.27139661562312,
+       "lon": 32.819349629286194,
+       "t": "x"
+      },
+      {
+       "lat": 49.59566223223194,
+       "lon": 31.87384885294145,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r24_4",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r24_4",
+     "region": "region",
+     "lat": 49.41805002954435,
+     "lon": 23.35056256403355,
+     "heading": 228.278,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 155.4,
+      "speedKmh": 296.4
+     },
+     "trail": [
+      {
+       "lat": 52.82234384856469,
+       "lon": 32.81994072824466,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r24_5",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r24_5",
+     "region": "region",
+     "lat": 50.60579108472205,
+     "lon": 33.21604273361984,
+     "heading": 241.665,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r24_6",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r24_6",
+     "region": "region",
+     "lat": 49.27565478261923,
+     "lon": 32.157487558561144,
+     "heading": 42.48,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.003,
+     "60": 0.0113,
+     "120": 0.0219,
+     "180": 0.0223
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 3,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 26",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r25_0",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r25_0",
+     "region": "region",
+     "lat": 47.56452429879166,
+     "lon": 27.490690193547643,
+     "heading": 319.394,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r25_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r25_1",
+     "region": "region",
+     "lat": 49.86376464930339,
+     "lon": 25.34002072751284,
+     "heading": 279.185,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r25_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r25_2",
+     "region": "region",
+     "lat": 47.066257330967176,
+     "lon": 27.463813319177667,
+     "heading": 173.433,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0007,
+     "120": 0.0034,
+     "180": 0.0034
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 27",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r26_0",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r26_0",
+     "region": "region",
+     "lat": 49.38072442221919,
+     "lon": 33.37697887550061,
+     "heading": 258.87,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 51.188350495427756,
+       "lon": 28.44467231053796,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    },
+    {
+     "id": "r26_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r26_1",
+     "region": "region",
+     "lat": 48.09874143212669,
+     "lon": 34.22445496681659,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r26_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r26_2",
+     "region": "region",
+     "lat": 49.374605816808106,
+     "lon": 23.855272617063967,
+     "heading": 239.906,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r26_3",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r26_3",
+     "region": "region",
+     "lat": 46.85825181556132,
+     "lon": 22.267930031160475,
+     "heading": 26.491,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r26_4",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r26_4",
+     "region": "region",
+     "lat": 50.232211502906154,
+     "lon": 31.559947982566328,
+     "heading": 76.798,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r26_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r26_5",
+     "region": "region",
+     "lat": 49.70353700905014,
+     "lon": 29.41093221571919,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r26_6",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r26_6",
+     "region": "region",
+     "lat": 48.110771674691556,
+     "lon": 31.25613279498031,
+     "heading": 276.473,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 50.92680030858328,
+       "lon": 33.432447060673596,
+       "t": "x"
+      },
+      {
+       "lat": 46.778681629304266,
+       "lon": 33.02230478991199,
+       "t": "x"
+      },
+      {
+       "lat": 49.40686286685434,
+       "lon": 33.29451755736719,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r26_7",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r26_7",
+     "region": "region",
+     "lat": 48.25385024821514,
+     "lon": 34.59937205926893,
+     "heading": 219.894,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 45.34781748950583,
+       "lon": 32.627051948814405,
+       "t": "x"
+      },
+      {
+       "lat": 51.67678369120968,
+       "lon": 30.951106784713065,
+       "t": "x"
+      },
+      {
+       "lat": 52.430355090039534,
+       "lon": 28.07920153036953,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.9656,
+     "60": 0.9656,
+     "120": 0.9657,
+     "180": 0.9657
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r26_5",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r26_5",
+      "region": "region",
+      "count": null,
+      "distanceKm": 86,
+      "direction": "NE",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 0,
+      "p": {
+       "30": 0.964,
+       "60": 0.964,
+       "120": 0.964,
+       "180": 0.964
+      }
+     },
+     {
+      "id": "r26_6",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r26_6",
+      "region": "region",
+      "count": null,
+      "distanceKm": 240,
+      "direction": "SE",
+      "course": "aside",
+      "courseSource": "trail",
+      "presumptive": true,
+      "etaMin": null,
+      "ageMin": 2,
+      "p": {
+       "30": 0.049,
+       "60": 0.049,
+       "120": 0.049,
+       "180": 0.049
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 5,
+    "staleIgnored": 1,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 28",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r27_0",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r27_0",
+     "region": "region",
+     "lat": 48.093874807104704,
+     "lon": 29.409792639654945,
+     "heading": 220.186,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r27_1",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r27_1",
+     "region": "region",
+     "lat": 51.80625794404055,
+     "lon": 32.13476735472406,
+     "heading": 100.531,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 215.6,
+      "speedKmh": 168.1
+     }
+    },
+    {
+     "id": "r27_2",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r27_2",
+     "region": "region",
+     "lat": 46.34962703596492,
+     "lon": 33.75646362332502,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0101,
+     "60": 0.0121,
+     "120": 0.0243,
+     "180": 0.0255
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 29",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r28_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r28_0",
+     "region": "region",
+     "lat": 51.454070588185004,
+     "lon": 27.21894587925863,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r28_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r28_1",
+     "region": "region",
+     "lat": 50.95894958185654,
+     "lon": 23.665775748057463,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r28_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r28_2",
+     "region": "region",
+     "lat": 50.26971477312464,
+     "lon": 34.07915608833303,
+     "heading": 209.834,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 52.10484368587803,
+       "lon": 30.10253674275112,
+       "t": "x"
+      },
+      {
+       "lat": 52.07360982743867,
+       "lon": 29.663630625821,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0043,
+     "120": 0.0183,
+     "180": 0.0198
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 3,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 30",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r29_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r29_0",
+     "region": "region",
+     "lat": 46.44279379262265,
+     "lon": 33.418795109901474,
+     "heading": 225.936,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 47.464644658890506,
+       "lon": 27.60543098178985,
+       "t": "x"
+      },
+      {
+       "lat": 51.82552989409674,
+       "lon": 33.5764609943432,
+       "t": "x"
+      }
+     ]
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 31",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r30_0",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r30_0",
+     "region": "region",
+     "lat": 47.27834601877666,
+     "lon": 27.429909187813752,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r30_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r30_1",
+     "region": "region",
+     "lat": 50.60392793371084,
+     "lon": 23.71256000425415,
+     "heading": 276.08,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r30_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r30_2",
+     "region": "region",
+     "lat": 47.25923457793272,
+     "lon": 27.033657053929797,
+     "heading": 358.883,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 48.35001829404031,
+       "lon": 32.79782095360203,
+       "t": "x"
+      },
+      {
+       "lat": 52.84493628106434,
+       "lon": 32.883478716087566,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    },
+    {
+     "id": "r30_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r30_3",
+     "region": "region",
+     "lat": 51.512430286763305,
+     "lon": 27.403077021949173,
+     "heading": 65.398,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0964,
+     "60": 0.0964,
+     "120": 0.1008,
+     "180": 0.1009
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r30_0",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r30_0",
+      "region": "region",
+      "count": null,
+      "distanceKm": 231,
+      "direction": "S",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 15,
+      "ageMin": 2,
+      "p": {
+       "30": 0.096,
+       "60": 0.096,
+       "120": 0.096,
+       "180": 0.096
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 2,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 32",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r31_0",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r31_0",
+     "region": "region",
+     "lat": 48.97575628718141,
+     "lon": 27.46081339914995,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 8.7,
+      "speedKmh": 565.0
+     },
+     "areaOnly": true
+    },
+    {
+     "id": "r31_1",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r31_1",
+     "region": "region",
+     "lat": 51.53607676464654,
+     "lon": 27.042060072861343,
+     "heading": 240.007,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0399,
+     "60": 0.0399,
+     "120": 0.0399,
+     "180": 0.0399
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r31_1",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r31_1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 275,
+      "direction": "N",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": null,
+      "ageMin": 22,
+      "p": {
+       "30": 0.04,
+       "60": 0.04,
+       "120": 0.04,
+       "180": 0.04
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 33",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r32_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r32_0",
+     "region": "region",
+     "lat": 49.11575348840585,
+     "lon": 22.954810919606224,
+     "heading": 25.222,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r32_1",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r32_1",
+     "region": "region",
+     "lat": 46.72049154908739,
+     "lon": 27.040140850773952,
+     "heading": 0.374,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r32_2",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r32_2",
+     "region": "region",
+     "lat": 51.07051723276114,
+     "lon": 29.444788155343243,
+     "heading": 317.682,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 48.573940212735536,
+       "lon": 31.5037649158517,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r32_3",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r32_3",
+     "region": "region",
+     "lat": 48.10037043436319,
+     "lon": 23.660826442152334,
+     "heading": 269.904,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "areaOnly": true
+    },
+    {
+     "id": "r32_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r32_4",
+     "region": "region",
+     "lat": 50.608242791001686,
+     "lon": 28.6983615891959,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r32_5",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r32_5",
+     "region": "region",
+     "lat": 51.88016169576758,
+     "lon": 25.02145535643216,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 88.9,
+      "speedKmh": 646.8
+     }
+    },
+    {
+     "id": "r32_6",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r32_6",
+     "region": "region",
+     "lat": 46.208365116994756,
+     "lon": 28.88598236701595,
+     "heading": 179.752,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 52.27458556858377,
+       "lon": 24.548824071784832,
+       "t": "x"
+      },
+      {
+       "lat": 47.554329254013695,
+       "lon": 24.43473210287008,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r32_7",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r32_7",
+     "region": "region",
+     "lat": 48.990924107191105,
+     "lon": 22.35166817980717,
+     "heading": 337.617,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 52.30450466381982,
+       "lon": 33.89917154207453,
+       "t": "x"
+      },
+      {
+       "lat": 52.90303997117831,
+       "lon": 34.11071004451973,
+       "t": "x"
+      },
+      {
+       "lat": 45.55208322215892,
+       "lon": 31.646542593037026,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0096,
+     "60": 0.1006,
+     "120": 0.1035,
+     "180": 0.1039
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r32_4",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r32_4",
+      "region": "region",
+      "count": null,
+      "distanceKm": 154,
+      "direction": "N",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": true,
+      "etaMin": 35,
+      "ageMin": 0,
+      "p": {
+       "30": 0.01,
+       "60": 0.101,
+       "120": 0.101,
+       "180": 0.101
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 34",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r33_0",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r33_0",
+     "region": "region",
+     "lat": 47.07102522153504,
+     "lon": 28.348345209933186,
+     "heading": 351.437,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0235,
+     "120": 0.0608,
+     "180": 0.0609
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r33_0",
+      "type": "unknown",
+      "title": "БпЛА",
+      "locality": "place r33_0",
+      "region": "region",
+      "count": null,
+      "distanceKm": 241,
+      "direction": "S",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 70,
+      "ageMin": 7,
+      "p": {
+       "30": 0.0,
+       "60": 0.023,
+       "120": 0.061,
+       "180": 0.061
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 1,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 35",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r34_0",
+     "type": "fpv",
+     "title": "БпЛА",
+     "locality": "place r34_0",
+     "region": "region",
+     "lat": 47.89258013771193,
+     "lon": 30.27281241343925,
+     "heading": 55.793,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r34_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r34_1",
+     "region": "region",
+     "lat": 49.54304846090405,
+     "lon": 29.04213648544031,
+     "heading": 144.431,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "trail": [
+      {
+       "lat": 48.553396175964245,
+       "lon": 25.267659608108644,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r34_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r34_2",
+     "region": "region",
+     "lat": 47.514005755844224,
+     "lon": 26.732546943146836,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.99,
+     "60": 0.9901,
+     "120": 0.9902,
+     "180": 0.9902
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r34_1",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r34_1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 54,
+      "direction": "NE",
+      "course": "away",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 0,
+      "p": {
+       "30": 0.99,
+       "60": 0.99,
+       "120": 0.99,
+       "180": 0.99
+      }
+     },
+     {
+      "id": "r34_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r34_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 230,
+      "direction": "SW",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": true,
+      "etaMin": 60,
+      "ageMin": 7,
+      "p": {
+       "30": 0.0,
+       "60": 0.013,
+       "120": 0.021,
+       "180": 0.021
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 2,
+    "staleIgnored": 0,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 36",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r35_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r35_0",
+     "region": "region",
+     "lat": 47.41762827387859,
+     "lon": 25.136220478750474,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 47.58952544272564,
+       "lon": 27.05139167074916,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r35_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r35_1",
+     "region": "region",
+     "lat": 49.29659360527827,
+     "lon": 27.182071505322828,
+     "heading": 72.828,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 50.81650263888082,
+       "lon": 27.4471515488387,
+       "t": "x"
+      },
+      {
+       "lat": 51.27836120131901,
+       "lon": 23.016509335211207,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r35_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r35_2",
+     "region": "region",
+     "lat": 50.30102629263793,
+     "lon": 25.957970202455677,
+     "heading": 290.688,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r35_3",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r35_3",
+     "region": "region",
+     "lat": 48.69215010452573,
+     "lon": 27.834426700278573,
+     "heading": 139.266,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r35_4",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r35_4",
+     "region": "region",
+     "lat": 46.63674839439354,
+     "lon": 32.881846626218746,
+     "heading": 289.771,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "areaOnly": true
+    },
+    {
+     "id": "r35_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r35_5",
+     "region": "region",
+     "lat": 46.3841877296576,
+     "lon": 29.69026682012008,
+     "heading": 321.974,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "trail": [
+      {
+       "lat": 45.952408561688806,
+       "lon": 25.37813321952011,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r35_6",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r35_6",
+     "region": "region",
+     "lat": 48.6442331952293,
+     "lon": 28.807152810269994,
+     "heading": 192.152,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r35_7",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r35_7",
+     "region": "region",
+     "lat": 51.25649577213181,
+     "lon": 29.727297452964436,
+     "heading": 110.885,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 311.5,
+      "speedKmh": 757.9
+     }
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.5898,
+     "60": 0.5962,
+     "120": 0.5969,
+     "180": 0.597
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r35_1",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r35_1",
+      "region": "region",
+      "count": null,
+      "distanceKm": 94,
+      "direction": "W",
+      "course": "toward",
+      "courseSource": "trail",
+      "presumptive": true,
+      "etaMin": 5,
+      "ageMin": 2,
+      "p": {
+       "30": 0.484,
+       "60": 0.492,
+       "120": 0.492,
+       "180": 0.492
+      }
+     },
+     {
+      "id": "r35_3",
+      "type": "recon",
+      "title": "БпЛА",
+      "locality": "place r35_3",
+      "region": "region",
+      "count": null,
+      "distanceKm": 76,
+      "direction": "SW",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 5,
+      "ageMin": 2,
+      "p": {
+       "30": 0.205,
+       "60": 0.205,
+       "120": 0.205,
+       "180": 0.205
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 5,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 37",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r36_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r36_0",
+     "region": "region",
+     "lat": 50.99142123869656,
+     "lon": 34.59568000292398,
+     "heading": 103.65,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 19.0,
+      "speedKmh": 266.4
+     },
+     "trail": [
+      {
+       "lat": 51.60858151221449,
+       "lon": 32.83602923157102,
+       "t": "x"
+      },
+      {
+       "lat": 51.58902322502789,
+       "lon": 31.84006516484927,
+       "t": "x"
+      },
+      {
+       "lat": 45.25543596855446,
+       "lon": 24.404628180685418,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r36_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r36_1",
+     "region": "region",
+     "lat": 50.3153561159344,
+     "lon": 29.605580870017217,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "velocity": {
+      "bearingDeg": 320.8,
+      "speedKmh": 564.9
+     }
+    },
+    {
+     "id": "r36_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r36_2",
+     "region": "region",
+     "lat": 47.22301248269502,
+     "lon": 30.398406974686644,
+     "heading": 206.515,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 46.23066709469167,
+       "lon": 33.49523185088346,
+       "t": "x"
+      }
+     ],
+     "areaOnly": true
+    },
+    {
+     "id": "r36_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r36_3",
+     "region": "region",
+     "lat": 47.602107740875034,
+     "lon": 27.055868412002127,
+     "heading": 236.278,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0,
+     "120": 0.0,
+     "180": 0.0
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [],
+    "listedTotal": 0,
+    "simulated": 1,
+    "staleIgnored": 2,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 38",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r37_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r37_0",
+     "region": "region",
+     "lat": 48.20906488599383,
+     "lon": 28.683021827340607,
+     "heading": 281.747,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r37_1",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r37_1",
+     "region": "region",
+     "lat": 51.65444440403467,
+     "lon": 29.622663059037823,
+     "heading": 306.087,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 123.2,
+      "speedKmh": 757.4
+     },
+     "areaOnly": true
+    },
+    {
+     "id": "r37_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r37_2",
+     "region": "region",
+     "lat": 52.348941328972266,
+     "lon": 30.20859351356564,
+     "heading": 156.055,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r37_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r37_3",
+     "region": "region",
+     "lat": 49.52482497288554,
+     "lon": 30.638617696778763,
+     "heading": 131.847,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 51.90131377150409,
+       "lon": 33.4059388006158,
+       "t": "x"
+      },
+      {
+       "lat": 52.29828869241976,
+       "lon": 26.64299783696147,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r37_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r37_4",
+     "region": "region",
+     "lat": 47.49788267385532,
+     "lon": 30.387353487433117,
+     "heading": 172.188,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 70,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "velocity": {
+      "bearingDeg": 173.7,
+      "speedKmh": 889.1
+     }
+    },
+    {
+     "id": "r37_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r37_5",
+     "region": "region",
+     "lat": 47.020085965497074,
+     "lon": 26.09191244363257,
+     "heading": 273.024,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r37_6",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r37_6",
+     "region": "region",
+     "lat": 46.56494977043563,
+     "lon": 23.35975108275873,
+     "heading": 307.37,
+     "status": "active",
+     "updatedAt": "2026-11-13T12:00:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r37_7",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r37_7",
+     "region": "region",
+     "lat": 50.8401712959361,
+     "lon": 22.24941864651876,
+     "heading": 39.787,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.168,
+     "60": 0.168,
+     "120": 0.1686,
+     "180": 0.1688
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r37_0",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r37_0",
+      "region": "region",
+      "count": null,
+      "distanceKm": 115,
+      "direction": "S",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": true,
+      "etaMin": 0,
+      "ageMin": 44,
+      "p": {
+       "30": 0.149,
+       "60": 0.149,
+       "120": 0.149,
+       "180": 0.149
+      }
+     },
+     {
+      "id": "r37_3",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r37_3",
+      "region": "region",
+      "count": null,
+      "distanceKm": 160,
+      "direction": "E",
+      "course": "away",
+      "courseSource": "trail",
+      "presumptive": true,
+      "etaMin": null,
+      "ageMin": 44,
+      "p": {
+       "30": 0.023,
+       "60": 0.023,
+       "120": 0.023,
+       "180": 0.023
+      }
+     }
+    ],
+    "listedTotal": 2,
+    "simulated": 5,
+    "staleIgnored": 1,
+    "areaOnly": [
+     {
+      "region": "region",
+      "count": 1
+     }
+    ],
+    "ballistic": true,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 39",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r38_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r38_0",
+     "region": "region",
+     "lat": 47.44498083004092,
+     "lon": 22.49107477799184,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r38_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r38_1",
+     "region": "region",
+     "lat": 48.40649100378965,
+     "lon": 30.182892988216665,
+     "heading": 145.889,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r38_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r38_2",
+     "region": "region",
+     "lat": 49.74583531756236,
+     "lon": 29.832087928216435,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r38_3",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r38_3",
+     "region": "region",
+     "lat": 50.294739402524065,
+     "lon": 25.074724454993977,
+     "heading": 132.135,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r38_4",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r38_4",
+     "region": "region",
+     "lat": 47.21446209284236,
+     "lon": 28.21798867384244,
+     "heading": 73.591,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r38_5",
+     "type": "unknown",
+     "title": "БпЛА",
+     "locality": "place r38_5",
+     "region": "region",
+     "lat": 47.92113875040204,
+     "lon": 23.839813404995667,
+     "heading": 72.231,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r38_6",
+     "type": "recon",
+     "title": "БпЛА",
+     "locality": "place r38_6",
+     "region": "region",
+     "lat": 51.017753687981845,
+     "lon": 24.634103520084484,
+     "heading": 162.878,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r38_7",
+     "type": "missile",
+     "title": "БпЛА",
+     "locality": "place r38_7",
+     "region": "region",
+     "lat": 52.281943482809936,
+     "lon": 27.286790857145537,
+     "heading": 115.953,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:53:00Z",
+     "uncertaintyKm": 144.4,
+     "positionQuality": "confirmed"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.5469,
+     "60": 0.5542,
+     "120": 0.5607,
+     "180": 0.5611
+    },
+    "level": {
+     "30": "high",
+     "60": "high",
+     "120": "high",
+     "180": "high"
+    },
+    "targets": [
+     {
+      "id": "r38_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r38_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 114,
+      "direction": "NE",
+      "course": "unknown",
+      "courseSource": "unknown",
+      "presumptive": false,
+      "etaMin": 0,
+      "ageMin": 22,
+      "p": {
+       "30": 0.503,
+       "60": 0.503,
+       "120": 0.503,
+       "180": 0.503
+      }
+     },
+     {
+      "id": "r38_7",
+      "type": "missile",
+      "title": "БпЛА",
+      "locality": "place r38_7",
+      "region": "region",
+      "count": null,
+      "distanceKm": 349,
+      "direction": "N",
+      "course": "aside",
+      "courseSource": "heading",
+      "presumptive": false,
+      "etaMin": 20,
+      "ageMin": 7,
+      "p": {
+       "30": 0.082,
+       "60": 0.082,
+       "120": 0.082,
+       "180": 0.082
+      }
+     },
+     {
+      "id": "r38_3",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r38_3",
+      "region": "region",
+      "count": null,
+      "distanceKm": 271,
+      "direction": "NW",
+      "course": "toward",
+      "courseSource": "heading",
+      "presumptive": true,
+      "etaMin": 45,
+      "ageMin": 44,
+      "p": {
+       "30": 0.006,
+       "60": 0.02,
+       "120": 0.021,
+       "180": 0.021
+      }
+     }
+    ],
+    "listedTotal": 3,
+    "simulated": 6,
+    "staleIgnored": 2,
+    "areaOnly": [],
+    "ballistic": false,
+    "mig31k": false
+   }
+  },
+  {
+   "name": "random 40",
+   "now": "2026-11-13T12:00:00Z",
+   "threats": [
+    {
+     "id": "r39_0",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_0",
+     "region": "region",
+     "lat": 50.03977711522379,
+     "lon": 24.20814512546609,
+     "heading": 349.791,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "confirmed"
+    },
+    {
+     "id": "r39_1",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_1",
+     "region": "region",
+     "lat": 49.52902264051418,
+     "lon": 23.923828212681805,
+     "heading": 14.309,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 28,
+     "positionQuality": "approx",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 53.20465294361523,
+       "lon": 26.415394966122435,
+       "t": "x"
+      },
+      {
+       "lat": 51.90854340031613,
+       "lon": 27.829555520450363,
+       "t": "x"
+      },
+      {
+       "lat": 53.00981491088009,
+       "lon": 22.957718942736463,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r39_2",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_2",
+     "region": "region",
+     "lat": 50.756179167212004,
+     "lon": 26.25547108423612,
+     "heading": 52.603,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx",
+     "velocity": {
+      "bearingDeg": 192.4,
+      "speedKmh": 708.7
+     }
+    },
+    {
+     "id": "r39_3",
+     "type": "ballistic",
+     "title": "БпЛА",
+     "locality": "place r39_3",
+     "region": "region",
+     "lat": 49.881678312781084,
+     "lon": 23.84625175410404,
+     "heading": 322.61,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:16:00Z",
+     "uncertaintyKm": 4,
+     "positionQuality": "approx"
+    },
+    {
+     "id": "r39_4",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_4",
+     "region": "region",
+     "lat": 48.159930293976,
+     "lon": 26.110932033456756,
+     "heading": 240.117,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r39_5",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_5",
+     "region": "region",
+     "lat": 49.66224407091353,
+     "lon": 33.325507750322835,
+     "heading": null,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:58:30Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "confirmed",
+     "presumptiveCourse": true,
+     "trail": [
+      {
+       "lat": 50.716711192600876,
+       "lon": 23.5300494635838,
+       "t": "x"
+      },
+      {
+       "lat": 45.486829936490786,
+       "lon": 33.51042611454571,
+       "t": "x"
+      },
+      {
+       "lat": 48.001894290853144,
+       "lon": 30.560022163320046,
+       "t": "x"
+      }
+     ]
+    },
+    {
+     "id": "r39_6",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_6",
+     "region": "region",
+     "lat": 46.870150071808304,
+     "lon": 24.734967060130746,
+     "heading": 265.857,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:38:00Z",
+     "uncertaintyKm": 10,
+     "positionQuality": "approx",
+     "presumptiveCourse": true
+    },
+    {
+     "id": "r39_7",
+     "type": "uav",
+     "title": "БпЛА",
+     "locality": "place r39_7",
+     "region": "region",
+     "lat": 47.85508823563885,
+     "lon": 27.813494545160165,
+     "heading": 235.198,
+     "status": "active",
+     "updatedAt": "2026-11-13T11:14:00Z",
+     "uncertaintyKm": 3.2,
+     "positionQuality": "approx"
+    }
+   ],
+   "expected": {
+    "version": "B0-2026-11",
+    "probability": {
+     "30": 0.0,
+     "60": 0.0386,
+     "120": 0.0463,
+     "180": 0.047
+    },
+    "level": {
+     "30": "none",
+     "60": "none",
+     "120": "none",
+     "180": "none"
+    },
+    "targets": [
+     {
+      "id": "r39_2",
+      "type": "uav",
+      "title": "БпЛА",
+      "locality": "place r39_2",
+      "region": "region",
+      "count": null,
+      "distanceKm": 232,
+      "direction": "NW",
+      "course": "aside",
+      "courseSource": "trail",
+      "presumptive": false,
+      "etaMin": 45,
+      "ageMin": 2,
+      "p": {
+       "30": 0.0,
+       "60": 0.039,
+       "120": 0.041,
+       "180": 0.041
+      }
+     }
+    ],
+    "listedTotal": 1,
+    "simulated": 5,
+    "staleIgnored": 2,
+    "areaOnly": [],
+    "ballistic": true,
+    "mig31k": false
+   }
+  }
+ ]
+}

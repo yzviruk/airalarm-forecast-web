@@ -67,6 +67,15 @@
   .note { margin-top: 12px; padding: 10px 14px; border-radius: 10px; font-size: 0.92rem;
           background: var(--panel); border: 1px solid var(--line); }
   .note.warn { background: var(--warn-bg); border-color: transparent; color: var(--warn); font-weight: 600; }
+  .card .raised { font-size: 0.74rem; margin-top: 4px; opacity: 0.9; }
+  .badge { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.74rem;
+           font-weight: 600; background: var(--warn-bg); color: var(--warn); vertical-align: middle; }
+  .targets { list-style: none; margin: 0; padding: 0; background: var(--panel); border: 1px solid var(--line);
+             border-radius: 14px; }
+  .targets li { padding: 10px 14px; border-top: 1px solid var(--line); }
+  .targets li:first-child { border-top: 0; }
+  .targets .what { font-weight: 600; overflow-wrap: anywhere; }
+  .targets .where { font-size: 0.9rem; color: var(--muted); }
   .fine { margin-top: 12px; font-size: 0.9rem; color: var(--muted); }
   footer { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--muted); }
   footer p { margin: 0 0 8px; }
@@ -91,7 +100,16 @@
   <section class="cards" id="cards" aria-live="polite"></section>
 
   <p class="fine"><strong>Балістичні удари не прогнозуються. Низький рівень не означає безпеки.</strong></p>
-  <p class="fine" id="layer-note" hidden>Прогноз поки що спирається лише на карту тривог у сусідніх районах, тому він грубий.</p>
+  <div class="note warn" id="ballistic" hidden>У даних є балістична загроза. Балістика не прогнозується: орієнтуйтесь на офіційну тривогу.</div>
+  <div class="note warn" id="mig" hidden>Зліт МіГ-31К: тривога можлива по всій країні за лічені хвилини.</div>
+  <p class="fine" id="layer-note" hidden></p>
+
+  <section id="targets-box" hidden>
+    <h2>Цілі в повітрі <span class="badge">експериментально</span></h2>
+    <div class="note warn" id="targets-incomplete" style="margin: 0 0 10px" hidden>Дані про цілі неповні: зараз прогноз спирається лише на карту тривог.</div>
+    <ul class="targets" id="targets"></ul>
+    <p class="fine" id="targets-note"></p>
+  </section>
   <p class="fine" id="service"></p>
 
   <footer>
@@ -102,6 +120,6 @@
   </footer>
   <noscript><p class="note warn">Для роботи сторінки потрібен JavaScript.</p></noscript>
 </main>
-<script type="module" src="app.js?v=1"></script>
+<script type="module" src="app.js?v=2"></script>
 </body>
 </html>

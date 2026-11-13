@@ -23,6 +23,9 @@
       "probability": 0.0032,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -30,6 +33,9 @@
       "probability": 0.0062,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -37,6 +43,9 @@
       "probability": 0.0138,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -44,6 +53,9 @@
       "probability": 0.0208,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -71,6 +83,9 @@
       "probability": 0.0037,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -78,6 +93,9 @@
       "probability": 0.0072,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -85,6 +103,9 @@
       "probability": 0.0164,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -92,6 +113,9 @@
       "probability": 0.0241,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -119,6 +143,9 @@
       "probability": 0.0037,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -126,6 +153,9 @@
       "probability": 0.0072,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -133,6 +163,9 @@
       "probability": 0.0164,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -140,6 +173,9 @@
       "probability": 0.0241,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -167,6 +203,9 @@
       "probability": 0.0032,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -174,6 +213,9 @@
       "probability": 0.0062,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -181,6 +223,9 @@
       "probability": 0.0138,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -188,6 +233,9 @@
       "probability": 0.0208,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -215,6 +263,9 @@
       "probability": 0.0037,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -222,6 +273,9 @@
       "probability": 0.0072,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -229,6 +283,9 @@
       "probability": 0.0164,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -236,6 +293,9 @@
       "probability": 0.0241,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -263,6 +323,9 @@
       "probability": 0.0037,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -270,6 +333,9 @@
       "probability": 0.0072,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -277,6 +343,9 @@
       "probability": 0.0164,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -284,6 +353,9 @@
       "probability": 0.0241,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -368,6 +440,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -375,6 +450,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -382,6 +460,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -389,6 +470,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -501,6 +585,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -508,6 +595,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -515,6 +605,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -522,6 +615,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -557,6 +653,9 @@
       "probability": 0.0059,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -564,6 +663,9 @@
       "probability": 0.0081,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -571,6 +673,9 @@
       "probability": 0.0161,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -578,6 +683,9 @@
       "probability": 0.0231,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -697,6 +805,9 @@
       "probability": 0.0032,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -704,6 +815,9 @@
       "probability": 0.0062,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -711,6 +825,9 @@
       "probability": 0.0138,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -718,6 +835,9 @@
       "probability": 0.0208,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -760,6 +880,9 @@
       "probability": 0.0059,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -767,6 +890,9 @@
       "probability": 0.0081,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -774,6 +900,9 @@
       "probability": 0.0161,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -781,6 +910,9 @@
       "probability": 0.0231,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -1085,6 +1217,9 @@
       "probability": 0.007,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1092,6 +1227,9 @@
       "probability": 0.0115,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1099,6 +1237,9 @@
       "probability": 0.0217,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1106,6 +1247,9 @@
       "probability": 0.0308,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -1133,6 +1277,9 @@
       "probability": 0.0043,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1140,6 +1287,9 @@
       "probability": 0.0091,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1147,6 +1297,9 @@
       "probability": 0.0282,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1154,6 +1307,9 @@
       "probability": 0.0502,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -1266,6 +1422,9 @@
       "probability": 0.0615,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1273,6 +1432,9 @@
       "probability": 0.1644,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1280,6 +1442,9 @@
       "probability": 0.1644,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1287,6 +1452,9 @@
       "probability": 0.1831,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -1336,6 +1504,9 @@
       "probability": 0.0108,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1343,6 +1514,9 @@
       "probability": 0.0108,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1350,6 +1524,9 @@
       "probability": 0.0191,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -1357,6 +1534,9 @@
       "probability": 0.0267,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -2211,6 +2391,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -2218,6 +2401,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -2225,6 +2411,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -2232,6 +2421,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -2282,6 +2474,9 @@
       "probability": 0.0082,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2289,6 +2484,9 @@
       "probability": 0.0193,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2296,6 +2494,9 @@
       "probability": 0.059,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2303,6 +2504,9 @@
       "probability": 0.0996,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -2367,6 +2571,9 @@
       "probability": 0.0091,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2374,6 +2581,9 @@
       "probability": 0.0196,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2381,6 +2591,9 @@
       "probability": 0.0461,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2388,6 +2601,9 @@
       "probability": 0.0677,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -2732,6 +2948,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -2739,6 +2958,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -2746,6 +2968,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -2753,6 +2978,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -2795,6 +3023,9 @@
       "probability": 0.0032,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2802,6 +3033,9 @@
       "probability": 0.0062,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2809,6 +3043,9 @@
       "probability": 0.0138,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -2816,6 +3053,9 @@
       "probability": 0.0208,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -3160,6 +3400,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -3167,6 +3410,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -3174,6 +3420,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -3181,6 +3430,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -3315,6 +3567,9 @@
       "probability": 0.155,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3322,6 +3577,9 @@
       "probability": 0.155,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3329,6 +3587,9 @@
       "probability": 0.1803,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3336,6 +3597,9 @@
       "probability": 0.2209,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -3498,6 +3762,9 @@
       "probability": 0.0524,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3505,6 +3772,9 @@
       "probability": 0.1091,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3512,6 +3782,9 @@
       "probability": 0.1629,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3519,6 +3792,9 @@
       "probability": 0.2396,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -3729,6 +4005,9 @@
       "probability": 0.2654,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -3736,6 +4015,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -3743,6 +4025,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -3750,6 +4035,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -4223,6 +4511,9 @@
       "probability": 0.1319,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -4230,6 +4521,9 @@
       "probability": 0.2055,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -4237,6 +4531,9 @@
       "probability": 0.3013,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -4244,6 +4541,9 @@
       "probability": 0.396,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -4654,6 +4954,9 @@
       "probability": 0.0376,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -4661,6 +4964,9 @@
       "probability": 0.0728,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -4668,6 +4974,9 @@
       "probability": 0.1414,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -4675,6 +4984,9 @@
       "probability": 0.1811,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -5033,6 +5345,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -5040,6 +5355,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -5047,6 +5365,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -5054,6 +5375,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -5250,6 +5574,9 @@
       "probability": 0.223,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5257,6 +5584,9 @@
       "probability": 0.2816,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5264,6 +5594,9 @@
       "probability": 0.3121,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5271,6 +5604,9 @@
       "probability": 0.3909,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -5342,6 +5678,9 @@
       "probability": 0.0093,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5349,6 +5688,9 @@
       "probability": 0.0197,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5356,6 +5698,9 @@
       "probability": 0.043,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5363,6 +5708,9 @@
       "probability": 0.0652,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -5476,6 +5824,9 @@
       "probability": 0.0388,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5483,6 +5834,9 @@
       "probability": 0.0406,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5490,6 +5844,9 @@
       "probability": 0.062,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -5497,6 +5854,9 @@
       "probability": 0.0865,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -5833,6 +6193,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -5840,6 +6203,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -5847,6 +6213,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -5854,6 +6223,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -6149,6 +6521,9 @@
       "probability": 0.1526,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6156,6 +6531,9 @@
       "probability": 0.3232,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6163,6 +6541,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -6170,6 +6551,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -6465,6 +6849,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -6472,6 +6859,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -6479,6 +6869,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -6486,6 +6879,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -6528,6 +6924,9 @@
       "probability": 0.0056,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6535,6 +6934,9 @@
       "probability": 0.0123,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6542,6 +6944,9 @@
       "probability": 0.0314,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6549,6 +6954,9 @@
       "probability": 0.0492,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -6704,6 +7112,9 @@
       "probability": 0.0362,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6711,6 +7122,9 @@
       "probability": 0.0795,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6718,6 +7132,9 @@
       "probability": 0.1678,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6725,6 +7142,9 @@
       "probability": 0.2545,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -6887,6 +7307,9 @@
       "probability": 0.0566,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6894,6 +7317,9 @@
       "probability": 0.1216,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6901,6 +7327,9 @@
       "probability": 0.2758,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -6908,6 +7337,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -7056,6 +7488,9 @@
       "probability": 0.0845,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7063,6 +7498,9 @@
       "probability": 0.1774,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7070,6 +7508,9 @@
       "probability": 0.2477,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7077,6 +7518,9 @@
       "probability": 0.3118,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -7225,6 +7669,9 @@
       "probability": 0.0937,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7232,6 +7679,9 @@
       "probability": 0.1866,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7239,6 +7689,9 @@
       "probability": 0.2928,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7246,6 +7699,9 @@
       "probability": 0.3634,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -7387,6 +7843,9 @@
       "probability": 0.0358,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7394,6 +7853,9 @@
       "probability": 0.0397,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7401,6 +7863,9 @@
       "probability": 0.0544,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7408,6 +7873,9 @@
       "probability": 0.0761,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -7710,6 +8178,9 @@
       "probability": 0.0959,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7717,6 +8188,9 @@
       "probability": 0.2233,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7724,6 +8198,9 @@
       "probability": 0.2828,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7731,6 +8208,9 @@
       "probability": 0.3897,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -7781,6 +8261,9 @@
       "probability": 0.0051,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7788,6 +8271,9 @@
       "probability": 0.0106,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7795,6 +8281,9 @@
       "probability": 0.0246,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -7802,6 +8291,9 @@
       "probability": 0.0383,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -8030,6 +8522,9 @@
       "probability": 0.0548,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8037,6 +8532,9 @@
       "probability": 0.1254,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8044,6 +8542,9 @@
       "probability": 0.2018,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8051,6 +8552,9 @@
       "probability": 0.2827,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -8332,6 +8836,9 @@
       "probability": 0.1711,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8339,6 +8846,9 @@
       "probability": 0.1797,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8346,6 +8856,9 @@
       "probability": 0.2588,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8353,6 +8866,9 @@
       "probability": 0.3451,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -8409,6 +8925,9 @@
       "probability": 0.0139,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8416,6 +8935,9 @@
       "probability": 0.0253,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8423,6 +8945,9 @@
       "probability": 0.0535,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8430,6 +8955,9 @@
       "probability": 0.0709,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -8990,6 +9518,9 @@
       "probability": 0.0099,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -8997,6 +9528,9 @@
       "probability": 0.0217,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -9004,6 +9538,9 @@
       "probability": 0.0437,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -9011,6 +9548,9 @@
       "probability": 0.0657,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -9478,6 +10018,9 @@
       "probability": 0.2859,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -9485,6 +10028,9 @@
       "probability": 0.3303,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -9492,6 +10038,9 @@
       "probability": 0.3757,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -9499,6 +10048,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -9744,6 +10296,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -9751,6 +10306,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -9758,6 +10316,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -9765,6 +10326,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -10011,6 +10575,9 @@
       "probability": 0.1393,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10018,6 +10585,9 @@
       "probability": 0.2108,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10025,6 +10595,9 @@
       "probability": 0.2687,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10032,6 +10605,9 @@
       "probability": 0.3684,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -10256,6 +10832,9 @@
       "probability": 0.2342,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10263,6 +10842,9 @@
       "probability": 0.391,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10270,6 +10852,9 @@
       "probability": 0.3993,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10277,6 +10862,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -10537,6 +11125,9 @@
       "probability": 0.3916,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -10544,6 +11135,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -10551,6 +11145,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -10558,6 +11155,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -10873,6 +11473,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -10880,6 +11483,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -10887,6 +11493,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -10894,6 +11503,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -11181,6 +11793,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -11188,6 +11803,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -11195,6 +11813,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -11202,6 +11823,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -11455,6 +12079,9 @@
       "probability": 0.2011,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -11462,6 +12089,9 @@
       "probability": 0.3092,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -11469,6 +12099,9 @@
       "probability": 0.3733,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -11476,6 +12109,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -11907,6 +12543,9 @@
       "probability": 0.0108,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -11914,6 +12553,9 @@
       "probability": 0.0224,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -11921,6 +12563,9 @@
       "probability": 0.0498,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -11928,6 +12573,9 @@
       "probability": 0.0736,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -12188,6 +12836,9 @@
       "probability": 0.3824,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12195,6 +12846,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -12202,6 +12856,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -12209,6 +12866,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -12731,6 +13391,9 @@
       "probability": 0.2844,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12738,6 +13401,9 @@
       "probability": 0.3508,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12745,6 +13411,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -12752,6 +13421,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -12795,6 +13467,9 @@
       "probability": 0.0079,
       "baseRate": 0.0196,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12802,6 +13477,9 @@
       "probability": 0.0117,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12809,6 +13487,9 @@
       "probability": 0.0212,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12816,6 +13497,9 @@
       "probability": 0.0288,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -12978,6 +13662,9 @@
       "probability": 0.0368,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12985,6 +13672,9 @@
       "probability": 0.0627,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12992,6 +13682,9 @@
       "probability": 0.1079,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -12999,6 +13692,9 @@
       "probability": 0.1541,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -13168,6 +13864,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -13175,6 +13874,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -13182,6 +13884,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -13189,6 +13894,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -13632,6 +14340,9 @@
       "probability": 0.2536,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -13639,6 +14350,9 @@
       "probability": 0.3448,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -13646,6 +14360,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -13653,6 +14370,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -13828,6 +14548,9 @@
       "probability": 0.084,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -13835,6 +14558,9 @@
       "probability": 0.1255,
       "baseRate": 0.0382,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -13842,6 +14568,9 @@
       "probability": 0.1771,
       "baseRate": 0.0736,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -13849,6 +14578,9 @@
       "probability": 0.2653,
       "baseRate": 0.1057,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -14314,6 +15046,9 @@
       "probability": 0.4,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -14321,6 +15056,9 @@
       "probability": 0.4,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -14328,6 +15066,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -14335,6 +15076,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -14448,6 +15192,9 @@
       "probability": 0.0336,
       "baseRate": 0.0196,
       "level": "elevated",
+      "alertsLevel": "elevated",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14455,6 +15202,9 @@
       "probability": 0.0488,
       "baseRate": 0.0382,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14462,6 +15212,9 @@
       "probability": 0.0699,
       "baseRate": 0.0736,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14469,6 +15222,9 @@
       "probability": 0.0989,
       "baseRate": 0.1057,
       "level": "none",
+      "alertsLevel": "none",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      }
     ]
@@ -14582,6 +15338,9 @@
       "probability": 0.1885,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14589,6 +15348,9 @@
       "probability": 0.3137,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14596,6 +15358,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -14603,6 +15368,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]
@@ -14869,6 +15637,9 @@
       "probability": 0.3988,
       "baseRate": 0.0196,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14876,6 +15647,9 @@
       "probability": 0.3988,
       "baseRate": 0.0382,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": false
      },
      {
@@ -14883,6 +15657,9 @@
       "probability": 0.4,
       "baseRate": 0.0736,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      },
      {
@@ -14890,6 +15667,9 @@
       "probability": 0.4,
       "baseRate": 0.1057,
       "level": "high",
+      "alertsLevel": "high",
+      "targetsLevel": null,
+      "raisedByTargets": false,
       "atCap": true
      }
     ]

@@ -163,13 +163,17 @@ export function levelFor(probability, baseRate) {
 }
 
 const round4 = (v) => Math.round(v * 1e4) / 1e4;
+const LEVEL_ORDER = ["none", "elevated", "high", "very_high"];
+const higherLevel = (a, b) => (LEVEL_ORDER.indexOf(a) >= LEVEL_ORDER.indexOf(b) ? a : b);
 
 /**
  * Everything the page shows, from one alerts response.
  * alertsData  -- body of GET /api/v1/alerts
  * lastEndedMs -- when the target's previous alert ended, if the page knows it (else null)
+ * targets     -- result of evaluateTargets() (targets.js, experimental) or null. It can only
+ *                raise the text level of a card; the percentage always comes from the alerts model.
  */
-export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedMs = null) {
+export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedMs = null, targets = null) {
   const g = prepareGeometry(model);
   const snap = snapshotFromAlerts(alertsData);
   const result = {
@@ -197,13 +201,21 @@ export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedM
     result.mode = "quiet";
     const probs = predict(features(nowMs, active, lastEndedMs, g), model);
     const cap = model.cap ?? 1;
-    result.horizons = HORIZONS.map((h) => ({
-      minutes: h,
-      probability: round4(probs[h]),
-      baseRate: round4(model.base_rates[String(h)]),
-      level: levelFor(probs[h], model.base_rates[String(h)]),
-      atCap: probs[h] >= cap - 1e-9,
-    }));
+    result.horizons = HORIZONS.map((h) => {
+      const own = levelFor(probs[h], model.base_rates[String(h)]);
+      const byTargets = targets ? (targets.level[String(h)] ?? "none") : "none";
+      const level = higherLevel(own, byTargets);
+      return {
+        minutes: h,
+        probability: round4(probs[h]),
+        baseRate: round4(model.base_rates[String(h)]),
+        level,
+        alertsLevel: own,
+        targetsLevel: targets ? byTargets : null,
+        raisedByTargets: level !== own, // the experimental layer lifted the level
+        atCap: probs[h] >= cap - 1e-9,
+      };
+    });
   }
   return result;
 }

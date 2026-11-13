@@ -1,9 +1,12 @@
-// Page behaviour: fetches official alerts from NEPTUN, computes the forecast in the
-// browser (forecast.js) and renders it. There is no server of our own.
-import { buildForecast } from "./forecast.js?v=1";
+// Page behaviour: fetches official alerts and air targets from NEPTUN, computes the
+// forecast in the browser (forecast.js, targets.js) and renders it. There is no server of our own.
+import { buildForecast } from "./forecast.js?v=2";
+import { evaluateTargets } from "./targets.js?v=2";
 
 const ALERTS_URL = "https://neptun.in.ua/api/v1/alerts";
+const THREATS_URL = "https://neptun.in.ua/api/v1/threats";
 const REFRESH_MS = 45000;        // the source asks for no more than one request per 5 s
+const BETWEEN_REQUESTS_MS = 6000; // so the two requests of one refresh are spaced out too
 const FETCH_TIMEOUT_MS = 15000;
 const STALE_AFTER_MS = 180000;   // no fresh data for this long -> no forecast is shown
 const MEMORY_KEY = "airalarm.target.v1";
@@ -19,6 +22,12 @@ let model = null;
 let durations = null;
 let lastOkMs = null;      // when alerts were last fetched successfully
 let lastAlerts = null;    // the last good response
+let targetsModel = null;  // null if the experimental targets layer failed to load
+let lastThreats = null;   // the last good list of targets
+let lastThreatsMs = null;
+let threatsTried = false;  // the first request for targets has finished (well or not)
+let refreshing = false;
+const simCache = new Map();
 let timer = null;
 
 const clock = (ms) => timeFmt.format(new Date(ms));
@@ -89,13 +98,18 @@ function renderStatus(d, now, endedAt) {
     : `Тривога в ${a.oblastRaionsActive} з ${a.oblastRaionsTotal} районів області.`;
 }
 
-function renderCards(d, showForecast) {
+function renderCards(d, showForecast, withTargets) {
   const cards = $("cards");
   cards.textContent = "";
   const alertMode = showForecast && d.mode === "alert";
   $("cards-title").textContent = alertMode ? "Чи триватиме тривога" : "Чи почнеться тривога";
   $("alert-note").hidden = !alertMode;
-  $("layer-note").hidden = !showForecast || alertMode;
+  const note = $("layer-note");
+  note.hidden = !showForecast || alertMode;
+  note.textContent = withTargets
+    ? "Відсоток рахується лише з карти тривог у сусідніх районах: це перевірена, але груба модель. " +
+      "Рівень на картці може бути піднятий за даними про цілі; ця частина експериментальна, її точність ще не перевірена."
+    : "Прогноз спирається лише на карту тривог у сусідніх районах, тому він грубий.";
   if (!showForecast || !d.horizons.length) {
     for (const m of [30, 60, 120, 180]) {
       const c = el("div", "card nodata");
@@ -122,17 +136,70 @@ function renderCards(d, showForecast) {
       const p = el("div", "pct", h.atCap ? `${pct(h.probability)} і більше` : `≈ ${pct(h.probability)}`);
       p.append(el("div", "usual", `зазвичай ${pct(h.baseRate)}`));
       c.append(el("div", "when", HORIZON[h.minutes]), el("div", "level", LEVELS[h.level] || h.level), p);
+      if (h.raisedByTargets) c.append(el("div", "raised", "рівень піднято за даними про цілі (експериментально)"));
     }
     cards.append(c);
+  }
+}
+
+const DIRECTION = { N: "північ", NE: "північний схід", E: "схід", SE: "південний схід",
+                    S: "південь", SW: "південний захід", W: "захід", NW: "північний захід" };
+const COURSE = { toward: "курс у наш бік", aside: "курс убік", away: "курс від нас", unknown: "курс невідомий" };
+
+/** t: result of evaluateTargets() or null (no fresh data about targets). */
+function renderTargets(t, stale) {
+  $("ballistic").hidden = stale || !(t && t.ballistic);
+  $("mig").hidden = stale || !(t && t.mig31k);
+  const box = $("targets-box");
+  box.hidden = stale || !targetsModel;
+  if (box.hidden) return;
+  $("targets-incomplete").hidden = t !== null || !threatsTried;
+  const list = $("targets");
+  list.textContent = "";
+  const items = t ? t.targets : [];
+  list.hidden = !items.length;
+  for (const x of items) {
+    const li = el("li");
+    let course = COURSE[x.course] || COURSE.unknown;
+    if (x.presumptive && x.course !== "unknown") course += " (припущений)";
+    let where = `${x.distanceKm} км на ${DIRECTION[x.direction] || "?"} від міста · ${course}`;
+    if (x.etaMin != null) where += ` · якщо летітиме сюди: ${x.etaMin < 5 ? "уже поруч" : `≈ ${span(x.etaMin)}`}`;
+    li.append(el("div", "what", (x.title || "Ціль") + (x.locality ? ` · ${x.locality}` : "")), el("div", "where", where));
+    list.append(li);
+  }
+  const parts = [];
+  if (!t) {
+    parts.push(threatsTried ? "Свіжих даних про цілі немає." : "Дані про цілі завантажуються…");
+  } else {
+    if (!items.length) parts.push("Цілей, які найближчими годинами можуть дістатися району, не видно. Це не означає безпеки.");
+    else if (t.listedTotal > items.length) parts.push(`Показано ${items.length} із ${t.listedTotal} найвпливовіших.`);
+    parts.push(`Враховано цілей: ${t.simulated}.`);
+    if (t.areaOnly.length) {
+      parts.push(`Без точних координат: ${t.areaOnly.map((a) => a.region + (a.count > 1 ? ` (${a.count})` : "")).join(", ")}.`);
+    }
+    parts.push("Положення й курс цілей неточні (похибка 10–25 км, курс часто припущений); час підльоту дуже приблизний.");
+  }
+  $("targets-note").textContent = parts.join(" ");
+}
+
+function currentTargets(now) {
+  if (!targetsModel || lastThreats === null || now - lastThreatsMs > STALE_AFTER_MS) return null;
+  try {
+    return evaluateTargets(lastThreats, now, targetsModel, simCache);
+  } catch (err) {   // the experimental layer must never break the page
+    console.error("targets layer failed:", err);
+    return null;
   }
 }
 
 function render() {
   const now = Date.now();
   const stale = lastOkMs === null || now - lastOkMs > STALE_AFTER_MS;
-  const d = buildForecast(lastAlerts, now, model, durations, readMemory().endedAt ?? null);
+  const targets = stale ? null : currentTargets(now);
+  const d = buildForecast(lastAlerts, now, model, durations, readMemory().endedAt ?? null, targets);
   renderStatus(d, now, readMemory().endedAt ?? null);
-  renderCards(d, !stale);
+  renderCards(d, !stale, targets !== null);
+  renderTargets(targets, stale);
   const banner = $("stale");
   banner.hidden = !stale;
   if (stale) {
@@ -140,8 +207,8 @@ function render() {
       ? "Не вдається отримати дані про тривоги. Перевірте інтернет і офіційний застосунок «Повітряна тривога»."
       : `Дані застаріли: останнє оновлення о ${clock(lastOkMs)}. Стан вище може бути неактуальним, прогнозу немає.`;
   }
-  $("service").textContent = lastOkMs === null ? `Модель ${model.version}`
-    : `Оновлено о ${clock(lastOkMs)} · модель ${model.version}`;
+  const versions = model.version + (targetsModel ? ` + ${targetsModel.version} (цілі, експериментально)` : "");
+  $("service").textContent = lastOkMs === null ? `Модель ${versions}` : `Оновлено о ${clock(lastOkMs)} · модель ${versions}`;
 }
 
 // --- data -------------------------------------------------------------------
@@ -158,7 +225,37 @@ async function getJson(url, options = {}) {
   }
 }
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function refreshThreats() {
+  try {
+    const data = await getJson(THREATS_URL, { cache: "no-store" });
+    if (!data || !Array.isArray(data.threats)) throw new Error("unexpected response");
+    lastThreats = data.threats;
+    lastThreatsMs = Date.now();
+  } catch (err) {
+    console.warn("threats refresh failed:", err);
+  }
+  threatsTried = true;
+}
+
 async function refresh() {
+  if (refreshing) return;   // one refresh at a time keeps the requests spaced out
+  refreshing = true;
+  try {
+    await refreshAlerts();
+    render();
+    if (targetsModel) {
+      await sleep(BETWEEN_REQUESTS_MS);
+      await refreshThreats();
+      render();
+    }
+  } finally {
+    refreshing = false;
+  }
+}
+
+async function refreshAlerts() {
   try {
     const data = await getJson(ALERTS_URL, { cache: "no-store" });
     if (!data || !Array.isArray(data.raions)) throw new Error("unexpected response");
@@ -169,7 +266,6 @@ async function refresh() {
   } catch (err) {
     console.warn("alerts refresh failed:", err);
   }
-  render();
 }
 
 function schedule() {
@@ -189,8 +285,13 @@ async function start() {
     console.error(err);
     return;
   }
-  await refresh();
+  try {
+    targetsModel = await getJson("models/targets_B.json", { cache: "no-cache" });
+  } catch (err) {
+    console.warn("targets layer is not available:", err);
+  }
   schedule();
+  await refresh();
   document.addEventListener("visibilitychange", () => { if (!document.hidden) refresh(); });
 }
 
