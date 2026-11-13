@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f4f6f8">
+<title>Прогноз тривоги</title>
+<style>
+  :root {
+    --bg: #f4f6f8; --panel: #ffffff; --text: #16202a; --muted: #5d6b78; --line: #dbe2e8;
+    --calm: #1f8a4c; --calm-bg: #e3f4ea;
+    --alert-bg: #c62828;
+    --warn: #8a5a00; --warn-bg: #fff1cc;
+    --none: #dfe7ee; --none-text: #16202a;
+    --elevated: #f6c9c9; --elevated-text: #4a1010;
+    --high: #d9443f; --very-high: #a50f15;
+    --nodata: #b9c0c7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10161c; --panel: #19222b; --text: #e8edf2; --muted: #9aa7b3; --line: #2b3742;
+      --calm: #6fd39a; --calm-bg: #17352a;
+      --warn: #ffd98a; --warn-bg: #3d3016;
+      --none: #26323d; --none-text: #e8edf2;
+      --elevated: #6b2b2b; --elevated-text: #ffe1e1;
+      --nodata: #3a444e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 32px; }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 4px 0 14px; letter-spacing: -0.01em; }
+  h2 { font-size: 1rem; margin: 22px 0 10px; color: var(--muted); font-weight: 600; }
+
+  .status { border-radius: 14px; padding: 16px 18px; background: var(--panel); border: 1px solid var(--line); }
+  .status .title { font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+  .status .detail { margin-top: 4px; }
+  .status .sub { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
+  .status.calm { background: var(--calm-bg); border-color: transparent; }
+  .status.calm .title { color: var(--calm); }
+  .status.alert { background: var(--alert-bg); border-color: transparent; color: #fff; }
+  .status.alert .sub { color: #ffe3e3; }
+  .status.elevated { background: var(--warn-bg); border-color: transparent; }
+  .status.elevated .title { color: var(--warn); }
+  .status.unknown .title { color: var(--muted); }
+
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  @media (min-width: 620px) { .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .card { border-radius: 14px; padding: 14px; min-height: 118px; background: var(--none); color: var(--none-text);
+          display: flex; flex-direction: column; }
+  .card .when { font-size: 0.9rem; font-weight: 600; opacity: 0.8; }
+  .card .level { overflow-wrap: anywhere; font-size: 1.15rem; font-weight: 700; line-height: 1.2; margin-top: 6px; }
+  .card .pct { margin-top: auto; padding-top: 8px; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+  .card .usual { font-size: 0.78rem; opacity: 0.75; }
+  .card.elevated { background: var(--elevated); color: var(--elevated-text); }
+  .card.high { background: var(--high); color: #fff; }
+  .card.very_high { background: var(--very-high); color: #fff; }
+  .card.nodata { background: var(--nodata); color: var(--text); }
+  .card .big { font-size: 1.7rem; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .card .bar { height: 6px; border-radius: 3px; background: rgba(127,127,127,.25); margin-top: auto; overflow: hidden; }
+  .card .bar i { display: block; height: 100%; background: var(--alert-bg); }
+
+  .note { margin-top: 12px; padding: 10px 14px; border-radius: 10px; font-size: 0.92rem;
+          background: var(--panel); border: 1px solid var(--line); }
+  .note.warn { background: var(--warn-bg); border-color: transparent; color: var(--warn); font-weight: 600; }
+  .fine { margin-top: 12px; font-size: 0.9rem; color: var(--muted); }
+  footer { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--muted); }
+  footer p { margin: 0 0 8px; }
+  a { color: inherit; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Вінниця</h1>
+
+  <section id="status" class="status unknown" aria-live="polite">
+    <div class="title" id="status-title">Завантаження…</div>
+    <div class="detail" id="status-detail"></div>
+    <div class="sub" id="status-sub"></div>
+  </section>
+
+  <div class="note warn" id="stale" hidden></div>
+
+  <h2 id="cards-title">Чи почнеться тривога</h2>
+  <div class="note" id="alert-note" style="margin: 0 0 10px" hidden>Тривога вже діє. Нижче оцінка, чи вона ще триватиме.</div>
+  <section class="cards" id="cards" aria-live="polite"></section>
+
+  <p class="fine"><strong>Балістичні удари не прогнозуються. Низький рівень не означає безпеки.</strong></p>
+  <p class="fine" id="layer-note" hidden>Прогноз поки що спирається лише на карту тривог у сусідніх районах, тому він грубий.</p>
+  <p class="fine" id="service"></p>
+
+  <footer>
+    <p>Це допоміжна оцінка на основі відкритих даних, <strong>а не офіційне оповіщення</strong>.
+      Завжди орієнтуйтесь на офіційні сигнали повітряної тривоги та застосунок «Повітряна тривога».</p>
+    <p>Дані: <a href="https://neptun.in.ua" target="_blank" rel="noopener">Карта повітряних тривог — NEPTUN</a>.
+      Історія тривог для навчання моделі: набір даних Vadimkin/ukrainian-air-raid-sirens-dataset.</p>
+  </footer>
+  <noscript><p class="note warn">Для роботи сторінки потрібен JavaScript.</p></noscript>
+</main>
+<script type="module" src="app.js?v=1"></script>
+</body>
+</html>
