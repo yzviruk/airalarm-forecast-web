@@ -1,7 +1,7 @@
 // Page behaviour: fetches official alerts and air targets from NEPTUN, computes the
 // forecast in the browser (forecast.js, targets.js) and renders it. There is no server of our own.
-import { buildForecast } from "./forecast.js?v=3";
-import { evaluateTargets } from "./targets.js?v=3";
+import { buildForecast } from "./forecast.js?v=4";
+import { evaluateTargets } from "./targets.js?v=4";
 
 const ALERTS_URL = "https://neptun.in.ua/api/v1/alerts";
 const THREATS_URL = "https://neptun.in.ua/api/v1/threats";
@@ -14,13 +14,14 @@ const MEMORY_MAX_GAP_MS = 180000;
 const MEMORY_KEEP_MS = 6 * 3600000;
 
 const LEVELS = { none: "Ознак загрози не видно", elevated: "Підвищена", high: "Висока", very_high: "Дуже висока" };
-const ALERT_LEVELS = { red: "червоний рівень", yellow: "жовтий рівень" };
+const ALERT_LEVELS = { red: "червоний рівень (ракетна небезпека)", yellow: "жовтий рівень (загроза БпЛА)" };
 const HORIZON = { 30: "30 хв", 60: "1 година", 120: "2 години", 180: "3 години" };
 const timeFmt = new Intl.DateTimeFormat("uk-UA", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Kyiv" });
 const $ = (id) => document.getElementById(id);
 
 let model = null;
 let durations = null;
+let durationValidated = false;  // false: the duration curve comes from before the alert rules changed
 let lastOkMs = null;      // when alerts were last fetched successfully
 let lastAlerts = null;    // the last good response
 let targetsModel = null;  // null if the experimental targets layer failed to load
@@ -107,10 +108,19 @@ function renderCards(d, showForecast, withTargets) {
   $("alert-note").hidden = !alertMode;
   const note = $("layer-note");
   note.hidden = !showForecast || alertMode;
-  note.textContent = withTargets
-    ? "Відсоток рахується лише з карти тривог у сусідніх районах: це перевірена, але груба модель. " +
-      "Рівень на картці може бути піднятий за даними про цілі; ця частина експериментальна, її точність ще не перевірена."
-    : "Прогноз спирається лише на карту тривог у сусідніх районах, тому він грубий.";
+  note.textContent = !d.percentagesValidated ? "Рівень оцінюється за тривогами в сусідніх районах і за цілями в повітрі. Це експериментальна оцінка без відсотків: правила тривог змінилися у вересні 2026 року, модель навчена на старіших даних, і її точність для нинішніх правил не перевірена. Нові дані накопичуються."
+    : withTargets
+      ? "Відсоток рахується з карти тривог у сусідніх районах. " +
+        "Рівень на картці може бути піднятий за даними про цілі; ця частина експериментальна, її точність ще не перевірена."
+      : "Прогноз спирається лише на карту тривог у сусідніх районах, тому він грубий.";
+  const title = $("cards-title");
+  const noDuration = alertMode && !durationValidated;
+  $("alert-note").textContent = noDuration ? "Тривога діє. Оцінки, скільки вона ще триватиме, поки немає: правила тривог змінилися у вересні 2026 року, а нових даних ще замало." : "Тривога вже діє. Нижче оцінка, чи вона ще триватиме.";
+  cards.hidden = title.hidden = noDuration;
+  if (noDuration) return;
+  if (showForecast && !alertMode && d.horizons.length && !d.percentagesValidated) {
+    title.append(el("span", "badge", "експериментально"));
+  }
   if (!showForecast || !d.horizons.length) {
     for (const m of [30, 60, 120, 180]) {
       const c = el("div", "card nodata");
@@ -134,9 +144,12 @@ function renderCards(d, showForecast, withTargets) {
       }
     } else {
       c = el("div", `card ${h.level}`);
-      const p = el("div", "pct", h.atCap ? `${pct(h.probability)} і більше` : `≈ ${pct(h.probability)}`);
-      p.append(el("div", "usual", `зазвичай ${pct(h.baseRate)}`));
-      c.append(el("div", "when", HORIZON[h.minutes]), el("div", "level", LEVELS[h.level] || h.level), p);
+      c.append(el("div", "when", HORIZON[h.minutes]), el("div", "level", LEVELS[h.level] || h.level));
+      if (d.percentagesValidated) {
+        const p = el("div", "pct", h.atCap ? `${pct(h.probability)} і більше` : `≈ ${pct(h.probability)}`);
+        p.append(el("div", "usual", `зазвичай ${pct(h.baseRate)}`));
+        c.append(p);
+      }
       if (h.raisedByTargets) c.append(el("div", "raised", "рівень піднято за даними про цілі (експериментально)"));
     }
     cards.append(c);
@@ -278,7 +291,8 @@ async function start() {
   try {
     [model, durations] = await Promise.all([
       getJson("models/alerts_A.json", { cache: "no-cache" }),
-      getJson("models/duration.json", { cache: "no-cache" }).then((d) => d.durations_min),
+      getJson("models/duration.json", { cache: "no-cache" })
+        .then((d) => { durationValidated = d.validated === true; return d.durations_min; }),
     ]);
   } catch (err) {
     $("status-title").textContent = "Сторінка не завантажилась";

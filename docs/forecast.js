@@ -177,6 +177,9 @@ export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedM
   const g = prepareGeometry(model);
   const snap = snapshotFromAlerts(alertsData);
   const result = {
+    // false: the model was trained on data from before the alert rules changed, so the page
+    // must not show its numbers as percentages
+    percentagesValidated: model.validated === true,
     mode: "unknown",
     alert: { status: "unknown", level: null, since: null,
              oblastRaionsActive: null, oblastRaionsTotal: g.sameOblast.size + 1 },
