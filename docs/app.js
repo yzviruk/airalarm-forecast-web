@@ -16,6 +16,9 @@ const MEMORY_KEEP_MS = 6 * 3600000;
 const LEVELS = { none: "Не вище звичайного", elevated: "Підвищена", high: "Висока", very_high: "Дуже висока" };
 const ALERT_LEVELS = { red: "червоний рівень (ракетна небезпека)", yellow: "жовтий рівень (загроза БпЛА)" };
 const HORIZON = { 30: "30 хв", 60: "1 година", 120: "2 години", 180: "3 години" };
+// "Will an alert start" is shown only up to this horizon: beyond it an alert starts most of
+// the time anyway and the model adds almost nothing (checked 2026-11-16).
+const QUIET_MAX_MIN = 60;
 const timeFmt = new Intl.DateTimeFormat("uk-UA", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Kyiv" });
 const $ = (id) => document.getElementById(id);
 
@@ -109,7 +112,7 @@ function renderCards(d, showForecast, withTargets) {
   $("alert-note").hidden = !alertMode;
   const note = $("layer-note");
   note.hidden = !showForecast || alertMode;
-  note.textContent = !d.percentagesValidated ? "Рівень оцінюється за тривогами в сусідніх районах і за цілями в повітрі. Це експериментальна оцінка без відсотків: модель навчена лише на місяці даних за нинішніх правил тривог, і цього замало, щоб довіряти числам. Рівень показує, наскільки обстановка відрізняється від звичайної; тривоги зараз часті й за звичайної обстановки."
+  note.textContent = !d.percentagesValidated ? "Рівень оцінюється за тривогами в сусідніх районах і за цілями в повітрі. Це експериментальна оцінка без відсотків: модель навчена лише на місяці даних за нинішніх правил тривог, і цього замало, щоб довіряти числам. Рівень показує, наскільки обстановка відрізняється від звичайної; тривоги зараз часті й за звичайної обстановки. Прогнозу на 2–3 години немає: на такому проміжку тривога зараз починається в більшості випадків, і модель до цього нічого не додає."
     : withTargets
       ? "Відсоток рахується з карти тривог у сусідніх районах. " +
         "Рівень на картці може бути піднятий за даними про цілі; ця частина експериментальна, її точність ще не перевірена."
@@ -125,15 +128,17 @@ function renderCards(d, showForecast, withTargets) {
   if (showForecast && !alertMode && d.horizons.length && !d.percentagesValidated) {
     title.append(el("span", "badge", "експериментально"));
   }
-  if (!showForecast || !d.horizons.length) {
-    for (const m of [30, 60, 120, 180]) {
+  cards.className = alertMode ? "cards" : "cards two";
+  const horizons = alertMode ? d.horizons : d.horizons.filter((h) => h.minutes <= QUIET_MAX_MIN);
+  if (!showForecast || !horizons.length) {
+    for (const m of alertMode ? [30, 60, 120, 180] : [30, 60]) {
       const c = el("div", "card nodata");
       c.append(el("div", "when", HORIZON[m]), el("div", "level", "Немає даних"));
       cards.append(c);
     }
     return;
   }
-  for (const h of d.horizons) {
+  for (const h of horizons) {
     let c;
     if (alertMode) {
       c = el("div", `card${h.probability == null ? " nodata" : ""}`);

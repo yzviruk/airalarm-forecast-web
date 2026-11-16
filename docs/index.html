@@ -50,6 +50,7 @@
 
   .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   @media (min-width: 620px) { .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 620px) { .cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .card { border-radius: 14px; padding: 14px; min-height: 84px; background: var(--none); color: var(--none-text);
           display: flex; flex-direction: column; }
   .card .when { font-size: 0.9rem; font-weight: 600; opacity: 0.8; }
@@ -120,6 +121,6 @@
   </footer>
   <noscript><p class="note warn">Для роботи сторінки потрібен JavaScript.</p></noscript>
 </main>
-<script type="module" src="app.js?v=6"></script>
+<script type="module" src="app.js?v=7"></script>
 </body>
 </html>
