@@ -1,7 +1,7 @@
 // Page behaviour: fetches official alerts and air targets from NEPTUN, computes the
 // forecast in the browser (forecast.js, targets.js) and renders it. There is no server of our own.
-import { buildForecast, durationCurves } from "./forecast.js?v=6";
-import { evaluateTargets } from "./targets.js?v=6";
+import { buildForecast, durationCurves } from "./forecast.js?v=7";
+import { evaluateTargets } from "./targets.js?v=7";
 
 const ALERTS_URL = "https://neptun.in.ua/api/v1/alerts";
 const THREATS_URL = "https://neptun.in.ua/api/v1/threats";
@@ -91,7 +91,14 @@ function renderStatus(d, now, endedAt) {
     detail = parts.join(" · ");
   } else if (a.status === "none") {
     cls = "calm"; title = "Тривоги немає";
-    if (endedAt && minutesSince(endedAt, now) <= 60) detail = `Відбій о ${clock(endedAt)}`;
+    // Time since the last all-clear: shown for 3 hours; in the first hour it also explains
+    // why the level may be raised (the model's "recent_end" feature fades over about an hour).
+    // The page knows the all-clear only if it was open (or reopened soon) when it happened.
+    const ago = endedAt ? minutesSince(endedAt, now) : null;
+    if (ago !== null && ago <= 180) {
+      detail = `Відбій о ${clock(endedAt)}, ${ago < 1 ? "щойно" : `${span(ago)} тому`}.`
+        + (ago <= 60 ? " Після недавнього відбою нова тривога трапляється частіше; це враховано в рівні." : "");
+    }
   } else {
     cls = "unknown"; title = "Стан тривоги невідомий";
     detail = "Перевірте офіційний застосунок «Повітряна тривога».";

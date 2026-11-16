@@ -7,7 +7,7 @@
 // accuracy has not been checked. The result may raise the text level on the page but
 // must not be shown as a percentage.
 
-import { parseTime } from "./forecast.js?v=6";
+import { parseTime } from "./forecast.js?v=7";
 
 const EARTH_KM = 6371.0088;
 const KM_PER_DEG_LAT = 111.19;
