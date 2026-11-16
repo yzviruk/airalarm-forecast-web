@@ -1,7 +1,7 @@
 // Page behaviour: fetches official alerts and air targets from NEPTUN, computes the
 // forecast in the browser (forecast.js, targets.js) and renders it. There is no server of our own.
-import { buildForecast, durationCurves } from "./forecast.js?v=5";
-import { evaluateTargets } from "./targets.js?v=5";
+import { buildForecast, durationCurves } from "./forecast.js?v=6";
+import { evaluateTargets } from "./targets.js?v=6";
 
 const ALERTS_URL = "https://neptun.in.ua/api/v1/alerts";
 const THREATS_URL = "https://neptun.in.ua/api/v1/threats";
@@ -109,7 +109,7 @@ function renderCards(d, showForecast, withTargets) {
   $("alert-note").hidden = !alertMode;
   const note = $("layer-note");
   note.hidden = !showForecast || alertMode;
-  note.textContent = !d.percentagesValidated ? "Рівень оцінюється за тривогами в сусідніх районах і за цілями в повітрі. Це експериментальна оцінка без відсотків: правила тривог змінилися у вересні 2026 року, модель навчена на старіших даних, і її точність для нинішніх правил не перевірена. Нові дані накопичуються."
+  note.textContent = !d.percentagesValidated ? "Рівень оцінюється за тривогами в сусідніх районах і за цілями в повітрі. Це експериментальна оцінка без відсотків: модель навчена лише на місяці даних за нинішніх правил тривог, і цього замало, щоб довіряти числам. Рівень показує, наскільки обстановка відрізняється від звичайної; тривоги зараз часті й за звичайної обстановки."
     : withTargets
       ? "Відсоток рахується з карти тривог у сусідніх районах. " +
         "Рівень на картці може бути піднятий за даними про цілі; ця частина експериментальна, її точність ще не перевірена."

@@ -120,7 +120,6 @@ export function features(nowMs, active, lastEndMs, g) {
 
 /** Probability that an alert starts within each horizon; never decreases with the horizon. */
 export function predict(x, model) {
-  const cap = model.cap ?? 1;
   const z = x.map((v, i) => (v - model.mean[i]) / model.std[i]);
   const out = {};
   let floor = 0;
@@ -129,7 +128,7 @@ export function predict(x, model) {
     let score = c.intercept;
     for (let i = 0; i < z.length; i++) score += c.weights[i] * z[i];
     score = Math.max(-30, Math.min(30, score));
-    floor = Math.max(floor, Math.min(cap, 1 / (1 + Math.exp(-score))));
+    floor = Math.max(floor, Math.min(capFor(model, h), 1 / (1 + Math.exp(-score))));
     out[h] = floor;
   }
   return out;
@@ -177,11 +176,24 @@ function shown(probability) {
   return "value";
 }
 
+// Card levels compare the odds of the forecast with the usual odds for the horizon (see forecast.py).
+const ELEVATED_ODDS = 1.5;
+const HIGH_ODDS = 3.0;
+const VERY_HIGH_PROBABILITY = 0.6;
+
 export function levelFor(probability, baseRate) {
-  if (probability >= 0.6) return "very_high";
-  if (probability >= 0.3 || probability >= 4 * baseRate) return "high";
-  if (probability >= 1.5 * baseRate) return "elevated";
+  const base = Math.min(Math.max(baseRate, 1e-6), 1 - 1e-6);
+  const p = Math.min(Math.max(probability, 0), 1 - 1e-9);
+  const ratio = (p / (1 - p)) / (base / (1 - base));
+  if (ratio >= HIGH_ODDS) return probability >= VERY_HIGH_PROBABILITY ? "very_high" : "high";
+  if (ratio >= ELEVATED_ODDS) return "elevated";
   return "none";
+}
+
+/** Ceiling of the forecast for a horizon: one number for all horizons or a number per horizon. */
+export function capFor(model, horizon) {
+  const cap = model.cap ?? 1;
+  return typeof cap === "object" ? (cap[String(horizon)] ?? 1) : cap;
 }
 
 const round4 = (v) => Math.round(v * 1e4) / 1e4;
@@ -225,7 +237,6 @@ export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedM
   } else {
     result.mode = "quiet";
     const probs = predict(features(nowMs, active, lastEndedMs, g), model);
-    const cap = model.cap ?? 1;
     result.horizons = HORIZONS.map((h) => {
       const own = levelFor(probs[h], model.base_rates[String(h)]);
       const byTargets = targets ? (targets.level[String(h)] ?? "none") : "none";
@@ -238,7 +249,7 @@ export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedM
         alertsLevel: own,
         targetsLevel: targets ? byTargets : null,
         raisedByTargets: level !== own, // the experimental layer lifted the level
-        atCap: probs[h] >= cap - 1e-9,
+        atCap: probs[h] >= capFor(model, h) - 1e-9,
       };
     });
   }
