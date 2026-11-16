@@ -49,3 +49,4 @@ node --test
 
 - Тривоги: Карта повітряних тривог — NEPTUN, https://neptun.in.ua
 - Історія тривог для навчання: https://github.com/Vadimkin/ukrainian-air-raid-sirens-dataset (MIT)
+- Історія тривог за останній місяць (оцінка тривалості тривоги): alerts.in.ua, https://alerts.in.ua

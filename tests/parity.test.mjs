@@ -4,11 +4,11 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 
-import { buildForecast, kyivHour, parseTime } from "../docs/forecast.js";
+import { buildForecast, durationCurves, kyivHour, parseTime } from "../docs/forecast.js";
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8"));
 const model = read("../docs/models/alerts_A.json");
-const durations = read("../docs/models/duration.json").durations_min;
+const durations = durationCurves(read("../docs/models/duration.json"));
 const vectors = read("./vectors.json");
 
 const close = (a, b) => (a === null || b === null ? a === b : Math.abs(a - b) <= 1e-4);
@@ -57,6 +57,7 @@ for (const c of vectors.cases) {
       const w = want.horizons[i];
       assert.equal(h.minutes, w.minutes);
       assert.ok(close(h.probability, w.probability), `${h.minutes} min: ${h.probability} vs ${w.probability}`);
+      if (want.mode === "alert") assert.equal(h.shown, w.shown, `${h.minutes} min shown`);
       if (want.mode === "quiet") {
         assert.equal(h.level, w.level, `${h.minutes} min level`);
         assert.equal(h.atCap, w.atCap, `${h.minutes} min cap`);

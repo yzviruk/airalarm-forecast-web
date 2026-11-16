@@ -1,7 +1,7 @@
 // Page behaviour: fetches official alerts and air targets from NEPTUN, computes the
 // forecast in the browser (forecast.js, targets.js) and renders it. There is no server of our own.
-import { buildForecast } from "./forecast.js?v=4";
-import { evaluateTargets } from "./targets.js?v=4";
+import { buildForecast, durationCurves } from "./forecast.js?v=5";
+import { evaluateTargets } from "./targets.js?v=5";
 
 const ALERTS_URL = "https://neptun.in.ua/api/v1/alerts";
 const THREATS_URL = "https://neptun.in.ua/api/v1/threats";
@@ -21,7 +21,8 @@ const $ = (id) => document.getElementById(id);
 
 let model = null;
 let durations = null;
-let durationValidated = false;  // false: the duration curve comes from before the alert rules changed
+let durationValidated = false;  // false: the duration curve is not validated by the project's rules
+let durationPreliminary = false;  // true: checked on a few weeks of current data; shown with a mark
 let lastOkMs = null;      // when alerts were last fetched successfully
 let lastAlerts = null;    // the last good response
 let targetsModel = null;  // null if the experimental targets layer failed to load
@@ -114,10 +115,13 @@ function renderCards(d, showForecast, withTargets) {
         "Рівень на картці може бути піднятий за даними про цілі; ця частина експериментальна, її точність ще не перевірена."
       : "Прогноз спирається лише на карту тривог у сусідніх районах, тому він грубий.";
   const title = $("cards-title");
-  const noDuration = alertMode && !durationValidated;
-  $("alert-note").textContent = noDuration ? "Тривога діє. Оцінки, скільки вона ще триватиме, поки немає: правила тривог змінилися у вересні 2026 року, а нових даних ще замало." : "Тривога вже діє. Нижче оцінка, чи вона ще триватиме.";
+  const noDuration = alertMode && !durationValidated && !durationPreliminary;
+  $("alert-note").textContent = noDuration ? "Тривога діє. Оцінки, скільки вона ще триватиме, поки немає: правила тривог змінилися у вересні 2026 року, а нових даних ще замало."
+    : durationValidated ? "Тривога вже діє. Нижче оцінка, чи вона ще триватиме."
+    : "Тривога вже діє. Нижче попередня оцінка, чи вона ще триватиме: за тривогами в області за останній місяць, окремо для жовтого й червоного рівня. Перевірена лише на кількох тижнях даних; дуже довгі тривоги передбачає погано.";
   cards.hidden = title.hidden = noDuration;
   if (noDuration) return;
+  if (alertMode && !durationValidated) title.append(el("span", "badge", "попередня оцінка"));
   if (showForecast && !alertMode && d.horizons.length && !d.percentagesValidated) {
     title.append(el("span", "badge", "експериментально"));
   }
@@ -138,9 +142,12 @@ function renderCards(d, showForecast, withTargets) {
         c.append(el("div", "level", "Замало схожих випадків"));
       } else {
         const bar = el("div", "bar"), fill = document.createElement("i");
-        fill.style.width = `${Math.round(h.probability * 100)}%`;
+        // the ends of the scale are unreliable, so they are shown only as "less than" / "more than"
+        const shownP = h.shown === "below" ? 0.10 : h.shown === "above" ? 0.90 : h.probability;
+        fill.style.width = `${Math.round(shownP * 100)}%`;
         bar.append(fill);
-        c.append(el("div", "big", pct(h.probability)), el("div", "usual", "імовірно ще триватиме"), bar);
+        const text = h.shown === "below" ? "менше 10 %" : h.shown === "above" ? "понад 90 %" : pct(h.probability);
+        c.append(el("div", "big", text), el("div", "usual", "імовірно ще триватиме"), bar);
       }
     } else {
       c = el("div", `card ${h.level}`);
@@ -292,7 +299,11 @@ async function start() {
     [model, durations] = await Promise.all([
       getJson("models/alerts_A.json", { cache: "no-cache" }),
       getJson("models/duration.json", { cache: "no-cache" })
-        .then((d) => { durationValidated = d.validated === true; return d.durations_min; }),
+        .then((d) => {
+          durationValidated = d.validated === true;
+          durationPreliminary = d.preliminary === true;
+          return durationCurves(d);
+        }),
     ]);
   } catch (err) {
     $("status-title").textContent = "Сторінка не завантажилась";

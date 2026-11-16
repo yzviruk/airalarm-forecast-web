@@ -155,6 +155,28 @@ export function stillActive(durationsMin, elapsedMin) {
   return out;
 }
 
+// Estimates outside this range are shown only as "less than" / "more than" (see duration.py).
+const SHOWN_MIN = 0.10;
+const SHOWN_MAX = 0.90;
+
+/** Duration curves from models/duration.json: one per alert level plus "all" as the fallback. */
+export function durationCurves(model) {
+  return { all: model.durations_min, ...(model.by_level ?? {}) };
+}
+
+/** durations: a plain sorted array (one curve for every level) or the result of durationCurves(). */
+function curveFor(durations, level) {
+  if (Array.isArray(durations)) return durations;
+  return durations[level]?.length ? durations[level] : durations.all;
+}
+
+function shown(probability) {
+  if (probability === null) return null;
+  if (probability < SHOWN_MIN) return "below";
+  if (probability > SHOWN_MAX) return "above";
+  return "value";
+}
+
 export function levelFor(probability, baseRate) {
   if (probability >= 0.6) return "very_high";
   if (probability >= 0.3 || probability >= 4 * baseRate) return "high";
@@ -198,8 +220,8 @@ export function buildForecast(alertsData, nowMs, model, durationsMin, lastEndedM
   if (inAlert) {
     result.mode = "alert";
     const elapsed = own.since != null ? Math.max(0, (nowMs - own.since) / 60000) : 0;
-    const remaining = stillActive(durationsMin, elapsed);
-    result.horizons = HORIZONS.map((h) => ({ minutes: h, probability: remaining[h] }));
+    const remaining = stillActive(curveFor(durationsMin, own.level), elapsed);
+    result.horizons = HORIZONS.map((h) => ({ minutes: h, probability: remaining[h], shown: shown(remaining[h]) }));
   } else {
     result.mode = "quiet";
     const probs = predict(features(nowMs, active, lastEndedMs, g), model);

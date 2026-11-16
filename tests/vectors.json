@@ -877,19 +877,167 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.39759036144578314
+      "probability": 0.43346007604562736,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.26907630522088355
+      "probability": 0.22053231939163498,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.13654618473895583
+      "probability": 0.06463878326996197,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.09236947791164658
+      "probability": 0.026615969581749048,
+      "shown": "below"
+     }
+    ]
+   }
+  },
+  {
+   "name": "alert at the target, yellow, 70 min",
+   "now": "2026-11-13T12:00:00Z",
+   "lastEndedAt": null,
+   "alerts": {
+    "version": 1,
+    "raions": [
+     {
+      "key": "вінницький",
+      "name": "вінницький",
+      "oblast": "",
+      "since": "2026-11-13T10:50:00Z",
+      "level": "yellow"
+     }
+    ],
+    "oblasts": []
+   },
+   "expected": {
+    "mode": "alert",
+    "status": "alert",
+    "level": "yellow",
+    "since": "2026-11-13T10:50:00Z",
+    "oblastRaionsActive": 1,
+    "oblastRaionsTotal": 6,
+    "horizons": [
+     {
+      "minutes": 30,
+      "probability": 0.5229885057471264,
+      "shown": "value"
+     },
+     {
+      "minutes": 60,
+      "probability": 0.29310344827586204,
+      "shown": "value"
+     },
+     {
+      "minutes": 120,
+      "probability": 0.1206896551724138,
+      "shown": "value"
+     },
+     {
+      "minutes": 180,
+      "probability": 0.08620689655172414,
+      "shown": "below"
+     }
+    ]
+   }
+  },
+  {
+   "name": "alert at the target, red, 12 min",
+   "now": "2026-11-13T12:00:00Z",
+   "lastEndedAt": null,
+   "alerts": {
+    "version": 1,
+    "raions": [
+     {
+      "key": "вінницький",
+      "name": "вінницький",
+      "oblast": "",
+      "since": "2026-11-13T11:48:00Z",
+      "level": "red"
+     }
+    ],
+    "oblasts": []
+   },
+   "expected": {
+    "mode": "alert",
+    "status": "alert",
+    "level": "red",
+    "since": "2026-11-13T11:48:00Z",
+    "oblastRaionsActive": 1,
+    "oblastRaionsTotal": 6,
+    "horizons": [
+     {
+      "minutes": 30,
+      "probability": 0.36015325670498083,
+      "shown": "value"
+     },
+     {
+      "minutes": 60,
+      "probability": 0.08812260536398467,
+      "shown": "below"
+     },
+     {
+      "minutes": 120,
+      "probability": 0.02681992337164751,
+      "shown": "below"
+     },
+     {
+      "minutes": 180,
+      "probability": 0.0038314176245210726,
+      "shown": "below"
+     }
+    ]
+   }
+  },
+  {
+   "name": "alert at the target, level missing",
+   "now": "2026-11-13T12:00:00Z",
+   "lastEndedAt": null,
+   "alerts": {
+    "version": 1,
+    "raions": [
+     {
+      "key": "вінницький",
+      "name": "вінницький",
+      "oblast": "",
+      "since": "2026-11-13T11:35:00Z",
+      "level": null
+     }
+    ],
+    "oblasts": []
+   },
+   "expected": {
+    "mode": "alert",
+    "status": "alert",
+    "level": "red",
+    "since": "2026-11-13T11:35:00Z",
+    "oblastRaionsActive": 1,
+    "oblastRaionsTotal": 6,
+    "horizons": [
+     {
+      "minutes": 30,
+      "probability": 0.41216216216216217,
+      "shown": "value"
+     },
+     {
+      "minutes": 60,
+      "probability": 0.06756756756756757,
+      "shown": "below"
+     },
+     {
+      "minutes": 120,
+      "probability": 0.04054054054054054,
+      "shown": "below"
+     },
+     {
+      "minutes": 180,
+      "probability": 0.006756756756756757,
+      "shown": "below"
      }
     ]
    }
@@ -956,19 +1104,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.7021276595744681
+      "probability": 0.24468085106382978,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.46808510638297873
+      "probability": 0.09574468085106383,
+      "shown": "below"
      },
      {
       "minutes": 120,
-      "probability": 0.2978723404255319
+      "probability": 0.02127659574468085,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.2127659574468085
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -1000,19 +1152,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.5153846153846153
+      "probability": 0.3901639344262295,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.2923076923076923
+      "probability": 0.17049180327868851,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.1346153846153846
+      "probability": 0.022950819672131147,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.09230769230769231
+      "probability": 0.003278688524590164,
+      "shown": "below"
      }
     ]
    }
@@ -1044,19 +1200,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": null
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 60,
-      "probability": null
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 120,
-      "probability": null
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 180,
-      "probability": null
+      "probability": null,
+      "shown": null
      }
     ]
    }
@@ -1088,19 +1248,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.5153846153846153
+      "probability": 0.39344262295081966,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.2923076923076923
+      "probability": 0.17049180327868851,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.1346153846153846
+      "probability": 0.022950819672131147,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.09230769230769231
+      "probability": 0.003278688524590164,
+      "shown": "below"
      }
     ]
    }
@@ -1132,19 +1296,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.4396887159533074
+      "probability": 0.3691275167785235,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.2723735408560311
+      "probability": 0.13758389261744966,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.13618677042801555
+      "probability": 0.02348993288590604,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.08949416342412451
+      "probability": 0.003355704697986577,
+      "shown": "below"
      }
     ]
    }
@@ -3373,19 +3541,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.42578125
+      "probability": 0.4542124542124542,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.265625
+      "probability": 0.2222222222222222,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.1328125
+      "probability": 0.0695970695970696,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.08984375
+      "probability": 0.026862026862026864,
+      "shown": "below"
      }
     ]
    }
@@ -4247,19 +4419,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.7446808510638298
+      "probability": 0.7,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.6595744680851063
+      "probability": 0.5,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.425531914893617
+      "probability": 0.0,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.2553191489361702
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -4802,19 +4978,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.75
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 60,
-      "probability": 0.55
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 120,
-      "probability": 0.3
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 180,
-      "probability": 0.15
+      "probability": null,
+      "shown": null
      }
     ]
    }
@@ -7792,19 +7972,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.6842105263157895
+      "probability": 0.9375,
+      "shown": "above"
      },
      {
       "minutes": 60,
-      "probability": 0.5263157894736842
+      "probability": 0.8125,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.3157894736842105
+      "probability": 0.5,
+      "shown": "value"
      },
      {
       "minutes": 180,
-      "probability": 0.15789473684210525
+      "probability": 0.4375,
+      "shown": "value"
      }
     ]
    }
@@ -8262,19 +8446,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.480225988700565
+      "probability": 0.39080459770114945,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.3163841807909605
+      "probability": 0.06896551724137931,
+      "shown": "below"
      },
      {
       "minutes": 120,
-      "probability": 0.1807909604519774
+      "probability": 0.034482758620689655,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.11299435028248588
+      "probability": 0.005747126436781609,
+      "shown": "below"
      }
     ]
    }
@@ -9241,19 +9429,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.625
+      "probability": 0.37272727272727274,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.4107142857142857
+      "probability": 0.09090909090909091,
+      "shown": "below"
      },
      {
       "minutes": 120,
-      "probability": 0.26785714285714285
+      "probability": 0.02727272727272727,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.17857142857142858
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -9335,19 +9527,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.7727272727272727
+      "probability": 0.7777777777777778,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.6363636363636364
+      "probability": 0.2222222222222222,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.45454545454545453
+      "probability": 0.0,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.22727272727272727
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -9553,19 +9749,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.7931034482758621
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 60,
-      "probability": 0.6896551724137931
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 120,
-      "probability": 0.3448275862068966
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 180,
-      "probability": 0.20689655172413793
+      "probability": null,
+      "shown": null
      }
     ]
    }
@@ -9773,19 +9973,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.6567164179104478
+      "probability": 0.375,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.5074626865671642
+      "probability": 0.2916666666666667,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.34328358208955223
+      "probability": 0.041666666666666664,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.22388059701492538
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -11718,19 +11922,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.45348837209302323
+      "probability": 0.47928994082840237,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.2751937984496124
+      "probability": 0.22485207100591717,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.13565891472868216
+      "probability": 0.06863905325443787,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.08914728682170543
+      "probability": 0.02603550295857988,
+      "shown": "below"
      }
     ]
    }
@@ -12343,19 +12551,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.7127659574468085
+      "probability": 0.24468085106382978,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.46808510638297873
+      "probability": 0.09574468085106383,
+      "shown": "below"
      },
      {
       "minutes": 120,
-      "probability": 0.2978723404255319
+      "probability": 0.02127659574468085,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.2127659574468085
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -12974,19 +13186,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.8333333333333334
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 60,
-      "probability": 0.625
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 120,
-      "probability": 0.375
+      "probability": null,
+      "shown": null
      },
      {
       "minutes": 180,
-      "probability": 0.25
+      "probability": null,
+      "shown": null
      }
     ]
    }
@@ -14015,19 +14231,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.6704545454545454
+      "probability": 0.16666666666666666,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.48863636363636365
+      "probability": 0.09722222222222222,
+      "shown": "below"
      },
      {
       "minutes": 120,
-      "probability": 0.3181818181818182
+      "probability": 0.013888888888888888,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.2159090909090909
+      "probability": 0.0,
+      "shown": "below"
      }
     ]
    }
@@ -14686,19 +14906,23 @@
     "horizons": [
      {
       "minutes": 30,
-      "probability": 0.5
+      "probability": 0.3901639344262295,
+      "shown": "value"
      },
      {
       "minutes": 60,
-      "probability": 0.28846153846153844
+      "probability": 0.17049180327868851,
+      "shown": "value"
      },
      {
       "minutes": 120,
-      "probability": 0.1346153846153846
+      "probability": 0.022950819672131147,
+      "shown": "below"
      },
      {
       "minutes": 180,
-      "probability": 0.09230769230769231
+      "probability": 0.003278688524590164,
+      "shown": "below"
      }
     ]
    }
